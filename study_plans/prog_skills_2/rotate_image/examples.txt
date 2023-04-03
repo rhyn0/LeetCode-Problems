@@ -1,0 +1,26 @@
+Examples for Rotate Image on Leet Code
+===========================================
+
+Using ``Solution.rotate``
+
+Setup:
+    >>> from rotate_image import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> m = [[1,2,3],[4,5,6],[7,8,9]]
+    >>> sol.rotate(m)
+    >>> print(m)
+    [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+
+Example 2:
+    >>> m = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+    >>> sol.rotate(m)
+    >>> print(m)
+    [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]]
+
+Test 1:
+    >>> m = [[5]]
+    >>> sol.rotate(m)
+    >>> print(m)
+    [[5]]

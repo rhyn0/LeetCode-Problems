@@ -1,0 +1,20 @@
+Examples for Find All Anagrams in a String on Leet Code
+===========================================
+
+Using ``Solution.findAnagrams``
+
+Setup:
+    >>> from find_anagrams import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.findAnagrams('cbaebabacd', 'abc')
+    [0, 6]
+
+Example 2:
+    >>> sol.findAnagrams("abab", "ab")
+    [0, 1, 2]
+
+Test 1:
+    >>> sol.findAnagrams("a", "ab")
+    []

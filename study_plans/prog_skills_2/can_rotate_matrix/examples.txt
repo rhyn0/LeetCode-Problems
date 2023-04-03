@@ -1,0 +1,28 @@
+Examples for Determine Whether Matrix can be Obtained by Rotation on Leet Code
+===========================================
+
+Using ``Solution.findRotation``
+
+Setup:
+    >>> from matrix_match_rot import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.findRotation([[0, 1], [1, 0]], [[1, 0], [0, 1]])
+    True
+
+Example 2:
+    >>> sol.findRotation([[0,1],[1,1]], [[1,0],[0,1]])
+    False
+
+Example 3:
+    >>> sol.findRotation([[0,0,0],[0,1,0],[1,1,1]], [[1,1,1],[0,1,0],[0,0,0]])
+    True
+
+Test 1:
+    >>> sol.findRotation([[1]], [[0]])
+    False
+
+Test 2:
+    >>> sol.findRotation([[1,1],[0,1]], [[1,1],[1,0]])
+    True

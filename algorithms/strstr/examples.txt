@@ -1,0 +1,20 @@
+Examples for strStr on Leet Code
+=========================================
+
+Using ``Solution.strStr``
+
+Setup:
+    >>> from str_str import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.strStr("hello", "ll")
+    2
+
+Example 2:
+    >>> sol.strStr("aaaaa", "bba")
+    -1
+
+Example 3:
+    >>> sol.strStr("aaa", "")
+    0

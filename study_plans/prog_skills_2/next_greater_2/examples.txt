@@ -1,0 +1,20 @@
+Examples for Next Greater Element II on Leet Code
+===========================================
+
+Using ``Solution.nextGreaterElements``
+
+Setup:
+    >>> from next_great_2 import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.nextGreaterElements([1, 2, 1])
+    [2, -1, 2]
+
+Example 2:
+    >>> sol.nextGreaterElements([1,2,3,4,3])
+    [2, 3, 4, -1, 4]
+
+Test 1:
+    >>> sol.nextGreaterElements([5,4,3,2,1])
+    [-1, 5, 5, 5, 5]

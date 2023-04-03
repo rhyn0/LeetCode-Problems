@@ -1,0 +1,24 @@
+Examples for Length of Last Word on Leet Code
+===========================================
+
+Using ``Solution.lengthOfLastWord``
+
+Setup:
+    >>> from last_word import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.lengthOfLastWord("hello world")
+    5
+
+Example 2:
+    >>> sol.lengthOfLastWord("   fly me   to   the moon  ")
+    4
+
+Example 1:
+    >>> sol.lengthOfLastWord("luffy is still joyboy")
+    6
+
+Test 1:
+    >>> sol.lengthOfLastWord("Today is a nice day")
+    3

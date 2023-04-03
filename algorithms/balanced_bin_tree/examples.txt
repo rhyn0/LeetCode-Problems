@@ -1,0 +1,23 @@
+Examples for Balanced Binary Tree on Leet Code
+=========================================
+
+Using ``Solution.isBalanced``
+
+Setup:
+    >>> from balanced_binary_tree import Solution, TreeNode
+    >>> sol = Solution()
+
+Example 1:
+    >>> root = TreeNode(3, left=TreeNode(9), right=TreeNode(20, left=TreeNode(15), right=TreeNode(7)))
+    >>> sol.isBalanced(root)
+    True
+
+Example 2:
+    >>> root = TreeNode(1, left=TreeNode(2, left=TreeNode(3, left=TreeNode(4), right=TreeNode(4)), right=TreeNode(3)), right=TreeNode(2))
+    >>> sol.isBalanced(root)
+    False
+
+Example 3:
+    >>> root = None
+    >>> sol.isBalanced(root)
+    True

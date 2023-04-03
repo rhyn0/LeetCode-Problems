@@ -1,0 +1,25 @@
+Examples for Repeated Substring Pattern on Leet Code
+=========================================
+
+Using ``Solution.repeatedSubstringPattern``
+
+Setup:
+    >>> from repeat_substring_patt import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.repeatedSubstringPattern("abab")
+    True
+
+Example 2:
+    >>> sol.repeatedSubstringPattern("aba")
+    False
+
+Example 3:
+    >>> sol.repeatedSubstringPattern("abcabcabcabc")
+    True
+
+Test 1:
+    There needs to be a repeated pattern
+    >>> sol.repeatedSubstringPattern("a")
+    False

@@ -1,0 +1,32 @@
+Examples for Add to Array-Form of Integer on Leet Code
+===========================================
+
+Using ``Solution.addToArrayForm``
+
+Setup:
+    >>> from array_form_int import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.addToArrayForm([1, 2, 0, 0], 34)
+    [1, 2, 3, 4]
+
+Example 2:
+    >>> sol.addToArrayForm([2, 7, 4], 181)
+    [4, 5, 5]
+
+Example 3:
+    >>> sol.addToArrayForm([2, 1, 5], 806)
+    [1, 0, 2, 1]
+
+Test 1:
+    >>> sol.addToArrayForm([1, 2], 1234)
+    [1, 2, 4, 6]
+
+Test 2:
+    >>> sol.addToArrayForm([0], 0)
+    [0]
+
+Test 3:
+    >>> sol.addToArrayForm([9,9,9,9,9,9,9,9,9,9], 1)
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

@@ -1,0 +1,29 @@
+Examples for Subarray Product less than K on Leet Code
+===========================================
+
+Using ``Solution.numSubarrayProductLessThanK``
+
+Setup:
+    >>> from sub_product_k import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.numSubarrayProductLessThanK([10, 5, 2, 6], 100)
+    8
+
+Example 2:
+    >>> sol.numSubarrayProductLessThanK([1,2,3], 0)
+    0
+
+Test 1:
+    >>> sol.numSubarrayProductLessThanK([10,9,10,4,3,8,3,3,6,2,10,10,9,3], 19)
+    18
+
+Test 2:
+    >>> sol.numSubarrayProductLessThanK([10,2,2,5,4,4,4,3,7,7], 289)
+    31
+
+Test 3:
+    Constraint for nums array is to be greater than equal to 1.
+    >>> sol.numSubarrayProductLessThanK([1,1,1,1], 1)
+    0

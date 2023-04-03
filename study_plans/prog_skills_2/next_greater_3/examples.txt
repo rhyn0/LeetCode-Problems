@@ -1,0 +1,42 @@
+Examples for Next Greater Element III on Leet Code
+===========================================
+
+Using ``Solution.nextGreaterElement``
+
+Setup:
+    >>> from next_great_3 import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.nextGreaterElement(12)
+    21
+
+Example 2:
+    >>> sol.nextGreaterElement(21)
+    -1
+
+Test 1:
+    The below holds for all single digit numbers.
+    >>> sol.nextGreaterElement(8)
+    -1
+
+Test 2:
+    >>> sol.nextGreaterElement(851)
+    -1
+
+Test 3:
+    >>> sol.nextGreaterElement(815)
+    851
+
+Test 4:
+    >>> sol.nextGreaterElement(1234)
+    1243
+
+Test 5:
+    Supposed to cause an overflow error here, max of  2_147_483_647
+    >>> sol.nextGreaterElement(2_147_483_486)
+    -1
+
+Test 6:
+    >>> sol.nextGreaterElement(230_241)
+    230412

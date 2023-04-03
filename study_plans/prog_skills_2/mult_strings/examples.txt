@@ -1,0 +1,16 @@
+Examples for Multiply Strings on Leet Code
+===========================================
+
+Using ``Solution.multiply``
+
+Setup:
+    >>> from multiply_strings import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.multiply("2", "3")
+    '6'
+
+Example 2:
+    >>> sol.multiply("123", "456")
+    '56088'

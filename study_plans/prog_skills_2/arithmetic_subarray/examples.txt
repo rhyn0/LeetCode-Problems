@@ -1,0 +1,16 @@
+Examples for Arithmetic Subarrays on Leet Code
+===========================================
+
+Using ``Solution.checkArithmeticSubarrays``
+
+Setup:
+    >>> from arith_subarray import Solution
+    >>> sol = Solution()
+
+Example 1:
+    >>> sol.checkArithmeticSubarrays([4,6,5,9,3,7], left_index=[0,0,2], right_index=[2,3,5])
+    [True, False, True]
+
+Example 2:
+    >>> sol.checkArithmeticSubarrays([-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], left_index=[0,1,6,4,8,7], right_index=[4,4,9,7,9,10])
+    [False, True, False, False, True, True]
