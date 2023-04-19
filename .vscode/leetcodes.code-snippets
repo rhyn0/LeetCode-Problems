@@ -84,8 +84,8 @@
 		"prefix": "leettreepy",
 		"description": "Base class for BinaryTree Nodes",
 		"body": [
-			"class TreeNode:",
-			"    def __init__(self, val=0, left=None, right=None):",
+			"class TreeNode:  # noqa: D101",
+			"    def __init__(self, val=0, left=None, right=None):  # noqa: D107",
 			"        self.val = val",
 			"        self.left = left",
 			"        self.right = right"
