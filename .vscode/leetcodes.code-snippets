@@ -78,5 +78,17 @@
 			"\n\nif __name__ == \"__main__\":",
 			"    doctest.testmod(optionflags=doctest.REPORTING_FLAGS | doctest.ELLIPSIS)"
 		]
+	},
+	"LeetCode TreeNode Python": {
+		"scope": "python",
+		"prefix": "leettreepy",
+		"description": "Base class for BinaryTree Nodes",
+		"body": [
+			"class TreeNode:",
+			"    def __init__(self, val=0, left=None, right=None):",
+			"        self.val = val",
+			"        self.left = left",
+			"        self.right = right"
+		]
 	}
 }
