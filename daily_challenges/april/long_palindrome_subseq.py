@@ -15,7 +15,7 @@ class Solution:  # noqa: D101
             s (str): string to find palindromic subsequence in
 
         Returns:
-            int: lenght of the longest subsequence
+            int: length of the longest subsequence
         """
         str_len = len(s)
         dp, prev_dp = [0] * str_len, [0] * str_len
