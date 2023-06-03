@@ -40,7 +40,7 @@ class Solution:  # noqa: D101
         curr_node: int,
         neighbor: int,
         *,
-        inward: bool = True
+        inward: bool = True,
     ) -> list[list[int]]:
         """Update the color path lengths between current node and a neighbor.
 
