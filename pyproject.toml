@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "RO-LeetCode"
-version = "0.8.9"
+version = "0.9.0"
 description = "Various LeetCode exercises done"
 authors = ["Ryan Ozawa <ryan.ozawa21@gmail.com>"]
 license = "MIT"
@@ -8,7 +8,7 @@ readme = "README.md"
 
 [project]
 name = "RO-LeetCode"
-version = "0.8.9"
+version = "0.9.0"
 description = "Various LeetCode exercises done"
 authors = [{ name = "Ryan Ozawa", email = "ryan.ozawa21@gmail.com" }]
 license = { text = "MIT" }
@@ -166,28 +166,6 @@ import_heading_thirdparty = "External Party"
 import_heading_firstparty = "My Modules"
 profile = "black"
 group_by_package = true
-
-[tool.towncrier]
-directory = "changelog.d"
-filename = "CHANGELOG.md"
-package = "LeetCode-Problems"
-package_dir = "../"
-start_string = "<!-- towncrier release notes start -->\n"
-# template = "changelog.d/changelog_template.jinja"
-wrap = true
-issue_format = "#{issue}"
-title_format = "## {name} {version} ({project_date})\n"
-
-[[tool.towncrier.type]]
-directory = "add"
-name = "### Features Added\n"
-showcontent = true
-
-[[tool.towncrier.type]]
-directory = "fix"
-name = "### Problems Improved\n"
-showcontent = true
-
 
 [build-system]
 requires = ["poetry-core"]
