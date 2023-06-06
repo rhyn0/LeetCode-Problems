@@ -24,7 +24,7 @@ class SeatManager:
         heappush(self.seats, seat_num)
 
 
-def main():
+def main() -> None:
     """Seat Reservation Manager on LeetCode.
 
     ====================================================

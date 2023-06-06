@@ -32,7 +32,7 @@ class Solution:  # noqa: D101
         return arrows
 
 
-def main():
+def main() -> None:
     """Minimum Number of Arrows to Burst Balloons on LeetCode.
 
     ====================================================

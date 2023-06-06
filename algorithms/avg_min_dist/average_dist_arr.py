@@ -30,7 +30,7 @@ class Solution:  # noqa: D101
         for i, val in enumerate(nums, start=1):
             run_sum += val
             added_val = abs(
-                _escape_zero(run_sum, i) - _escape_zero(start_sum - run_sum, n_len - i)
+                _escape_zero(run_sum, i) - _escape_zero(start_sum - run_sum, n_len - i),
             )
             if added_val < min_val:
                 min_val = added_val
@@ -39,7 +39,7 @@ class Solution:  # noqa: D101
         return min_index
 
 
-def main():
+def main() -> None:
     """Average Minimum Distance on LeetCode.
 
     ====================================================

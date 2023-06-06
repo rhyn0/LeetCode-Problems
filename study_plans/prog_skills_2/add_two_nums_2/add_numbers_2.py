@@ -5,7 +5,11 @@ import doctest
 
 
 class ListNode:  # noqa: D101
-    def __init__(self, value: int = 0, next_: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        value: int = 0,
+        next_: ListNode | None = None,
+    ) -> None:
         self.val = value
         self.next = next_
 
@@ -15,7 +19,9 @@ class ListNode:  # noqa: D101
 
 class Solution:  # noqa: D101
     def addTwoNumbers(  # spec
-        self, l1: ListNode | None, l2: ListNode | None
+        self,
+        l1: ListNode | None,
+        l2: ListNode | None,
     ) -> ListNode | None:
         """Sum two numbers represented as linked list.
 
@@ -58,7 +64,7 @@ class Solution:  # noqa: D101
         return prev
 
 
-def main():
+def main() -> None:
     """Add Two Numbers II on LeetCode.
 
     ====================================================

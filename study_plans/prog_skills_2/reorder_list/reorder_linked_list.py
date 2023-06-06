@@ -5,7 +5,11 @@ import doctest
 
 
 class ListNode:  # noqa: D101
-    def __init__(self, val=0, _next: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        _next: ListNode | None = None,
+    ) -> None:
         self.val = val
         self.next = _next
 
@@ -43,7 +47,7 @@ class Solution:  # noqa: D101
             )
 
 
-def main():
+def main() -> None:
     """Reorder List from LeetCode.
 
     Setup:

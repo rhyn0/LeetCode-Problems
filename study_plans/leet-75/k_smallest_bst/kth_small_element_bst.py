@@ -6,8 +6,11 @@ import doctest
 
 class TreeNode:  # noqa: D101
     def __init__(  # noqa: D107
-        self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None
-    ):
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -53,7 +56,7 @@ class Solution:  # noqa: D101
         return smallest
 
 
-def main():
+def main() -> None:
     """Kth Smallest Element in a BST on LeetCode.
 
     ====================================================

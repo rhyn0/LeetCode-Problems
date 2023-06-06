@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     def repeatedSubstringPattern(self, in_str: str) -> bool:  # spec
         """Return if there if s is made up of a repeated substr.
@@ -19,8 +23,34 @@ class Solution:  # noqa: D101
         return False
 
 
+def main() -> None:
+    """459. Repeated Substring Pattern on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "abab"
+        >>> example_case_2 = "aba"
+        >>> test_case_1 = "abcabcabcabc"
+
+    Example 1:
+        >>> sol.repeatedSubstringPattern(example_case_1)
+        True
+
+    Example 2:
+        >>> sol.repeatedSubstringPattern(example_case_2)
+        False
+
+    Test 1:
+        >>> sol.repeatedSubstringPattern(test_case_1)
+        True
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.repeatedSubstringPattern("abab"))  # True
-    print(sol.repeatedSubstringPattern("aba"))  # False
-    print(sol.repeatedSubstringPattern("abcabcabcabc"))  # True
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

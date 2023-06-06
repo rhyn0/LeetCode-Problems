@@ -4,7 +4,7 @@ class Solution:
     def powerfulIntegers(self, x: int, y: int, bound: int) -> list[int]:
         """Return list of numbers that can be made from unique powers using x, y."""
 
-        def find_powers(x_pow, y_pow):
+        def find_powers(x_pow: int, y_pow: int) -> None:
             num = x**x_pow + y**y_pow
             if (
                 num <= bound

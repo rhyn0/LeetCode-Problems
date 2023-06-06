@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     INT_MAX = 2_147_483_647
 
@@ -24,7 +28,7 @@ class Solution:  # noqa: D101
                 + num_str[right]
                 + num_str[left + 1 : right]
                 + num_str[left]
-                + num_str[right + 1 :]
+                + num_str[right + 1 :],
             )
             if cmp_num > num:
                 if cmp_num > self.INT_MAX:
@@ -60,8 +64,34 @@ class Solution:  # noqa: D101
         return int(res) if num < int(res) < (2**31 - 1) else -1
 
 
+def main() -> None:
+    """556. Next Greater Element III on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = 12
+        >>> example_case_2 = 21
+        >>> self_test_1 = 8
+
+    Example 1:
+        >>> sol.nextGreaterElement(example_case_1)
+        12
+
+    Example 2:
+        >>> sol.nextGreaterElement(example_case_2)
+        -1
+
+    Self Test 1:
+        >>> sol.nextGreaterElement(self_test_1)
+        -1
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.nextGreaterElement(12))  # 21
-    print(sol.nextGreaterElement(21))  # -1
-    print(sol.nextGreaterElement(8))  # -1
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

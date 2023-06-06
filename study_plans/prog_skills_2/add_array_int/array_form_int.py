@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import zip_longest
 
 
@@ -17,7 +18,9 @@ class Solution:  # noqa: D101
         """
         ret_list, carry = [], 0
         for num_i, k_i in zip_longest(
-            reversed(num), reversed(str(addend)), fillvalue="0"
+            reversed(num),
+            reversed(str(addend)),
+            fillvalue="0",
         ):
             total = int(num_i) + int(k_i) + carry
 
@@ -30,11 +33,39 @@ class Solution:  # noqa: D101
         return ret_list[::-1]
 
 
+def main() -> None:
+    """989. Add to Array-Form of Integer on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [1, 2, 0, 0], 34
+        >>> example_case_2 = [2, 7, 4], 181
+        >>> example_case_3 = [2, 1, 5], 806
+        >>> test_case_1 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9], 1
+
+    Example 1:
+        >>> sol.addToArrayForm(*example_case_1)
+        [1, 2, 3, 4]
+
+    Example 2:
+        >>> sol.addToArrayForm(*example_case_2)
+        [4, 5, 5]
+
+    Example 3:
+        >>> sol.addToArrayForm(*example_case_3)
+        [1, 0, 2, 1]
+
+    Test 1:
+        >>> sol.addToArrayForm(*test_case_1)
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.addToArrayForm([1, 2, 0, 0], 34))  # [1, 2, 3, 4]
-    print(sol.addToArrayForm([2, 7, 4], 181))  # [4, 5, 5]
-    print(sol.addToArrayForm([2, 1, 5], 806))  # [1, 0, 2, 1]
-    print(
-        sol.addToArrayForm([9, 9, 9, 9, 9, 9, 9, 9, 9, 9], 1)
-    )  # [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

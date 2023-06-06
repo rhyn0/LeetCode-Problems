@@ -6,7 +6,9 @@ import doctest
 
 class Solution:  # noqa: D101
     def findOrder(  # spec
-        self, num_courses: int, prerequisites: list[list[int]]
+        self,
+        num_courses: int,
+        prerequisites: list[list[int]],
     ) -> list[int]:
         """Return a topologically sorted set of classes with prerequisites.
 
@@ -42,7 +44,7 @@ class Solution:  # noqa: D101
         return topo_order
 
 
-def main():
+def main() -> None:
     """Course Schedule II on LeetCode.
 
     ====================================================

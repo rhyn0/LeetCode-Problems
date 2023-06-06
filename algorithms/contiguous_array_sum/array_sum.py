@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         return False
 
 
-def main():
+def main() -> None:
     """Contiguous Subarray Sum on LeetCode.
 
     ====================================================

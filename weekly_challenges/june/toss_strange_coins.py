@@ -62,7 +62,8 @@ class Solution:  # noqa: D101
 
             heads_prob = prob[curr_coin] * recurse_coin(curr_coin + 1, remain_heads - 1)
             tails_prob = (1 - prob[curr_coin]) * recurse_coin(
-                curr_coin + 1, remain_heads
+                curr_coin + 1,
+                remain_heads,
             )
             return heads_prob + tails_prob
 
@@ -76,13 +77,14 @@ def float_compare(x: float, y: float) -> bool:
         ctx.prec = 5
         return (
             ctx.compare(
-                ctx.create_decimal_from_float(x), ctx.create_decimal_from_float(y)
+                ctx.create_decimal_from_float(x),
+                ctx.create_decimal_from_float(y),
             )
             == 0
         )
 
 
-def main():
+def main() -> None:
     """1230. Toss Strange Coins on LeetCode.
 
     ====================================================
@@ -142,5 +144,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

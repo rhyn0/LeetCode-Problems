@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     def multiply(self, num1: str, num2: str) -> str:
         """Multiply two strings representing numbers, return result as string.
@@ -30,7 +34,29 @@ class Solution:  # noqa: D101
         return str(total)
 
 
+def main() -> None:
+    """43. Multiply Strings on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "2", "3"
+        >>> example_case_2 = "123", "456"
+
+    Example 1:
+        >>> sol.multiply(*example_case_1)
+        '6'
+
+    Example 2:
+        >>> sol.multiply(*example_case_2)
+        '56088'
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.multiply("2", "3"))  # 6
-    print(sol.multiply("123", "456"))  # 56088
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

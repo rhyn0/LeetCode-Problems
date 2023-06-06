@@ -37,7 +37,7 @@ class Solution:  # noqa: D101
         return earliest_pos == 0
 
 
-def main():
+def main() -> None:
     """Jump Game on LeetCode.
 
     ====================================================

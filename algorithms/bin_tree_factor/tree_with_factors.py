@@ -32,7 +32,7 @@ class Solution:  # noqa: D101
         return sum(possible_trees.values()) % self.MODULO
 
 
-def main():
+def main() -> None:
     """Binary Trees with Factors on LeetCode.
 
     ====================================================

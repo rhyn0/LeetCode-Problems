@@ -16,7 +16,7 @@ class Solution:  # noqa: D101
             List[int]: list of first index occur and last index occur
         """
 
-        def bin_search(low_point: int, high_point: int, first: bool) -> int:
+        def bin_search(low_point: int, high_point: int, *, first: bool) -> int:
             while low_point <= high_point:
                 mid = (low_point + high_point) // 2
                 if nums[mid] == target:
@@ -37,14 +37,14 @@ class Solution:  # noqa: D101
         size_n = len(nums)
         if size_n == 0:
             return [-1, -1]
-        first_occur = bin_search(0, size_n - 1, True)
+        first_occur = bin_search(0, size_n - 1, first=True)
         if first_occur == -1:
             return [-1, -1]
-        last_occur = bin_search(0, size_n - 1, False)
+        last_occur = bin_search(0, size_n - 1, first=False)
         return [first_occur, last_occur]
 
 
-def main():
+def main() -> None:
     """Find First Last Position of Element in Sorted Array on LeetCode.
 
     ====================================================

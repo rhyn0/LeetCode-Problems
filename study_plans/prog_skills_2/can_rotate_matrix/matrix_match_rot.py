@@ -1,9 +1,12 @@
 # Standard Library
+import doctest
 
 
 class Solution:  # noqa: D101
     def findRotation(  # spec
-        self, mat: list[list[int]], target: list[list[int]]
+        self,
+        mat: list[list[int]],
+        target: list[list[int]],
     ) -> bool:
         """Return whether matrix can be rotated to match target.
 
@@ -37,13 +40,40 @@ class Solution:  # noqa: D101
         return False
 
 
+def main() -> None:
+    """1886. Determine Whether Matrix Can Be Obtained By Rotation on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [[0, 1], [1, 0]], [[1, 0], [0, 1]]
+        >>> example_case_2 = [[0, 1], [1, 1]], [[1, 0], [0, 1]]
+        >>> example_case_3 = [[0, 0, 0], [0, 1, 0], [1, 1, 1]],\
+            [[1, 1, 1], [0, 1, 0], [0, 0, 0]]
+        >>> test_case_1 = [[1]], [[0]]
+
+    Example 1:
+        >>> sol.findRotation(*example_case_1)
+        True
+
+    Example 2:
+        >>> sol.findRotation(*example_case_2)
+        False
+
+    Example 3:
+        >>> sol.findRotation(*example_case_3)
+        True
+
+    Test 1:
+        >>> sol.findRotation(*test_case_1)
+        False
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.findRotation([[0, 1], [1, 0]], [[1, 0], [0, 1]]))  # True
-    print(sol.findRotation([[0, 1], [1, 1]], [[1, 0], [0, 1]]))  # False
-    print(
-        sol.findRotation(
-            [[0, 0, 0], [0, 1, 0], [1, 1, 1]], [[1, 1, 1], [0, 1, 0], [0, 0, 0]]
-        )
-    )  # True
-    print(sol.findRotation([[1]], [[0]]))  # False
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

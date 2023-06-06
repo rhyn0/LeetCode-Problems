@@ -12,7 +12,7 @@ class SmallestInfiniteSet:
     Can also add positive integers back into the set to later be popped.
     """
 
-    def __init__(self):  # noqa: D107
+    def __init__(self) -> None:  # noqa: D107
         self.heap: list[int] = []
         self.curr_num = 0
         self.heap_set: set[int] = set()
@@ -44,7 +44,7 @@ def test_design_inputs(func_calls: list[str], inputs: list[list[Any]]) -> list[A
     ]
 
 
-def main():
+def main() -> None:
     """2336. Smallest Number in Infinite Set on LeetCode.
 
     ====================================================
@@ -72,5 +72,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

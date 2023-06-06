@@ -6,8 +6,11 @@ import doctest
 
 class TreeNode:  # noqa: D101
     def __init__(  # noqa: D107
-        self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None
-    ):
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -28,16 +31,17 @@ class Solution:  # noqa: D101
             bool: True if ``subRoot`` is a subtree of ``root`` otherwise False
         """
 
-        def match_sub(m_root: TreeNode | None, sub_root: TreeNode | None):
+        def match_sub(m_root: TreeNode | None, sub_root: TreeNode | None) -> bool:
             if not m_root and not sub_root:
                 return True
             if m_root and sub_root and m_root.val == sub_root.val:
                 return match_sub(m_root.left, sub_root.left) and match_sub(
-                    m_root.right, sub_root.right
+                    m_root.right,
+                    sub_root.right,
                 )
             return False
 
-        def dfs(main_root: TreeNode | None, sub_root: TreeNode | None):
+        def dfs(main_root: TreeNode | None, sub_root: TreeNode | None) -> bool:
             if not main_root:
                 return False
             if match_sub(main_root, sub_root):
@@ -47,7 +51,7 @@ class Solution:  # noqa: D101
         return dfs(root, subroot)
 
 
-def main():
+def main() -> None:
     """Subtree of Another Tree on LeetCode.
 
     ====================================================

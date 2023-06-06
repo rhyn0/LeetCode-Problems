@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -25,8 +26,34 @@ class Solution:  # noqa: D101
         return diff
 
 
+def main() -> None:
+    """Problem Name on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [1], 0
+        >>> example_case_2 = [0, 10], 2
+        >>> test_case_1 = [1, 3, 6], 3
+
+    Example 1:
+        >>> sol.smallestRangeII(*example_case_1)
+        0
+
+    Example 1:
+        >>> sol.smallestRangeII(*example_case_2)
+        6
+
+    Test 1:
+        >>> sol.smallestRangeII(*test_case_1)
+        3
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.smallestRangeII([1], 0))  # 0
-    print(sol.smallestRangeII([0, 10], 2))  # 6
-    print(sol.smallestRangeII([1, 3, 6], 3))  # 3
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

@@ -24,7 +24,7 @@ class Solution:  # noqa: D101
         return small_len if not isinstance(small_len, float) else 0
 
 
-def main():
+def main() -> None:
     """Minimum Size Subarray Sum on LeetCode.
 
     ====================================================

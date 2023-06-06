@@ -6,7 +6,9 @@ import doctest
 
 class Solution:  # noqa: D101
     def largestOverlap(  # spec
-        self, img1: list[list[int]], img2: list[list[int]]
+        self,
+        img1: list[list[int]],
+        img2: list[list[int]],
     ) -> int:
         """Return largest overlap possible between two images.
 
@@ -45,7 +47,7 @@ class Solution:  # noqa: D101
         return max(transform_vectors.values())
 
 
-def main():
+def main() -> None:
     """Image Overlap on LeetCode.
 
     ====================================================

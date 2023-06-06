@@ -31,12 +31,12 @@ class Solution:  # noqa: D101
                     char * bucket
                     for bucket, char_list in enumerate(bucket_freq, start=1)
                     for char in char_list
-                ]
-            )
+                ],
+            ),
         )
 
 
-def main():
+def main() -> None:
     """Sort Characters by Frequency on LeetCode.
 
     ====================================================

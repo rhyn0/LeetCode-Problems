@@ -5,7 +5,11 @@ import doctest
 
 
 class ListNode:  # noqa: D101
-    def __init__(self, value=0, _next: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        value: int = 0,
+        _next: ListNode | None = None,
+    ) -> None:
         self.val = value
         self.next = _next
 
@@ -55,7 +59,7 @@ class Solution:  # noqa: D101
         return new_head
 
 
-def main():
+def main() -> None:
     """Rotate List on LeetCode.
 
     ====================================================

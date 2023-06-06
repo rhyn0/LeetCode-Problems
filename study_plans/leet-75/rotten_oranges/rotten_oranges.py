@@ -1,13 +1,9 @@
 # Standard Library
 from collections import deque
+from collections.abc import Generator
 import doctest
 from enum import IntEnum
 from itertools import pairwise
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    # Standard Library
-    from collections.abc import Generator
 
 
 class OrangeFarmCell(IntEnum):
@@ -60,7 +56,7 @@ class Solution:  # noqa: D101
         return minute_max if num_oranges == 0 else -1
 
 
-def main():
+def main() -> None:
     """Rotting Oranges on LeetCode.
 
     ====================================================

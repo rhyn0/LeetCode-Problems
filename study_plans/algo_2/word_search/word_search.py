@@ -46,7 +46,7 @@ class Solution:  # noqa: D101
         )
 
 
-def main():
+def main() -> None:
     """Word Search on LeetCode.
 
     ====================================================

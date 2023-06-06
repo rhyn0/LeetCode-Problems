@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from math import sqrt
 
 
@@ -24,7 +25,29 @@ class Solution:  # noqa: D101
         return [p for _, p in sorted(que, key=lambda x: x[0])][:k]
 
 
+def main() -> None:
+    """973. K Closest Points to Origin on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [[1, 3], [-2, 2]], 1
+        >>> example_case_2 = [[3, 3], [5, -1], [-2, 4]], 2
+
+    Example 1:
+        >>> sol.kClosest(*example_case_1)
+        [[-2, 2]]
+
+    Example 2:
+        >>> sol.kClosest(*example_case_2)
+        [[3, 3], [-2, 4]]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.kClosest([[1, 3], [-2, 2]], 1))  # [[-2, 2]]
-    print(sol.kClosest([[3, 3], [5, -1], [-2, 4]], 2))  # [[3, 3], [-2, 4]]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

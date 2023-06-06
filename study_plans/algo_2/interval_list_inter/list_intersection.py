@@ -4,7 +4,9 @@ import doctest
 
 class Solution:  # noqa: D101
     def intervalIntersection(  # spec
-        self, first: list[list[int]], second: list[list[int]]
+        self,
+        first: list[list[int]],
+        second: list[list[int]],
     ) -> list[list[int]]:
         """Return intersection of the lists of intervals.
 
@@ -22,7 +24,8 @@ class Solution:  # noqa: D101
         f_ind = s_ind = 0
         while f_ind < first_n and s_ind < second_m:
             common_start, common_end = max(first[f_ind][0], second[s_ind][0]), min(
-                first[f_ind][1], second[s_ind][1]
+                first[f_ind][1],
+                second[s_ind][1],
             )
             if common_start <= common_end:
                 ret_intersect.append([common_start, common_end])
@@ -38,7 +41,7 @@ class Solution:  # noqa: D101
         return ret_intersect
 
 
-def main():
+def main() -> None:
     """Interval List Intersection on LeetCode.
 
     ====================================================

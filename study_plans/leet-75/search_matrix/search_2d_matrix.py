@@ -30,7 +30,7 @@ class Solution:  # noqa: D101
         return False
 
 
-def main():
+def main() -> None:
     """Search a 2D Matrix on LeetCode.
 
     ====================================================

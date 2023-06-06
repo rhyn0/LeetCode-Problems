@@ -40,7 +40,7 @@ class Solution:  # noqa: D101
         return prefix
 
 
-def main():
+def main() -> None:
     """Longest Common Prefix on LeetCode.
 
     ====================================================

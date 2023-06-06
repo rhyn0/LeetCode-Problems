@@ -28,7 +28,7 @@ class Solution:  # noqa: D101
         return rounds
 
 
-def main():
+def main() -> None:
     """Minimum Rounds to Complete All Tasks on LeetCode.
 
     ====================================================

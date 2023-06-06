@@ -19,7 +19,10 @@ class Solution:  # noqa: D101
         size_n = len(nums)
         ret_lists = []
 
-        def backtrack(avail_nums: list[int], tail=[]):  # noqa: B006
+        def backtrack(
+            avail_nums: list[int],
+            tail: list[int] = [],  # noqa: B006
+        ) -> None:
             if len(tail) == size_n:
                 if tail not in ret_lists:
                     ret_lists.append(tail[:])
@@ -39,7 +42,10 @@ class Solution:  # noqa: D101
         size_n = len(nums)
         ret_lists = []
 
-        def backtrack(avail_nums: Counter[int], tail=[]):  # noqa: B006
+        def backtrack(
+            avail_nums: Counter[int],
+            tail: list[int] = [],  # noqa: B006
+        ) -> None:
             if len(tail) == size_n:
                 ret_lists.append(list(tail))  # make a deep copy
                 return
@@ -57,7 +63,7 @@ class Solution:  # noqa: D101
         return ret_lists
 
 
-def main():
+def main() -> None:
     """Permutations II on LeetCode.
 
     ====================================================

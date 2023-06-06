@@ -20,17 +20,17 @@ repos:
       - id: debug-statements
       - id: check-case-conflict
   - repo: https://github.com/psf/black
-    rev: 23.1.0
+    rev: 23.3.0
     hooks:
       - id: black
         language_version: python3
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.259
+    rev: v0.0.270
     hooks:
       - id: ruff
         exclude: "^.*test(s)?/|__init__"
   - repo: https://github.com/PyCQA/flake8.git
-    rev: 5.0.4
+    rev: 6.0.0
     hooks:
       - id: flake8
         name: flake8-testing

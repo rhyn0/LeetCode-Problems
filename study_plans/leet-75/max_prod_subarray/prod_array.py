@@ -20,13 +20,15 @@ class Solution:  # noqa: D101
         result, curr_max, curr_min = nums[0], nums[0], nums[0]
         for num in nums[1:]:
             curr_max, curr_min = max(num, curr_max * num, curr_min * num), min(
-                num, curr_max * num, curr_min * num
+                num,
+                curr_max * num,
+                curr_min * num,
             )
             result = max(result, curr_max)
         return result
 
 
-def main():
+def main() -> None:
     """Maximum Product Subarray on LeetCode.
 
     ====================================================

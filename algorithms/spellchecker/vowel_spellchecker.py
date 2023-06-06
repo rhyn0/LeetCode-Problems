@@ -47,7 +47,7 @@ class Solution:  # noqa: D101
         return list(map(solve, queries))
 
 
-def main():
+def main() -> None:
     """Vowel Spellchecker on LeetCode.
 
     ====================================================

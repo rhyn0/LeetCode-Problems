@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from operator import itemgetter
 
 
@@ -27,7 +28,29 @@ class Solution:  # noqa: D101
         return truck_value
 
 
+def main() -> None:
+    """1710. Maximum Units on a Truck on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [[1, 3], [2, 2], [3, 1]], 4
+        >>> example_case_2 = [[5, 10], [2, 5], [4, 7], [3, 9]], 10
+
+    Example 1:
+        >>> sol.maximumUnits(*example_case_1)
+        8
+
+    Example 2:
+        >>> sol.maximumUnits(*example_case_2)
+        91
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.maximumUnits([[1, 3], [2, 2], [3, 1]], truck_size=4))  # 8
-    print(sol.maximumUnits([[5, 10], [2, 5], [4, 7], [3, 9]], truck_size=10))  # 91
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

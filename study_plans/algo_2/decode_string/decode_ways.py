@@ -36,7 +36,7 @@ class Solution:  # noqa: D101
         return prev_way
 
 
-def main():
+def main() -> None:
     """Decode Ways on LeetCode.
 
     ====================================================

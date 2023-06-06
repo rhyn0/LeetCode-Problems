@@ -56,7 +56,7 @@ class Solution:  # noqa: D101
         return right
 
 
-def main():
+def main() -> None:
     """Minimize Maximum of Array on LeetCode.
 
     ====================================================
@@ -98,5 +98,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

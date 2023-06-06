@@ -35,7 +35,7 @@ class Solution:  # noqa: D101
         return one_ago
 
 
-def main():
+def main() -> None:
     """House Robber on LeetCode.
 
     ====================================================

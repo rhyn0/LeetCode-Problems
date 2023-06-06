@@ -76,7 +76,7 @@ class Solution:  # noqa: D101
         return second
 
 
-def main():
+def main() -> None:
     """740. Delete and Earn on LeetCode.
 
     ====================================================
@@ -137,5 +137,5 @@ if __name__ == "__main__":
         ^ doctest.FAIL_FAST
         ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

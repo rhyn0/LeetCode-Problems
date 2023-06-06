@@ -36,7 +36,7 @@ class Solution:  # noqa: D101
         return [dfs(0, i) for i in range(m)]
 
 
-def main():
+def main() -> None:
     """Where will the Ball Fall on LeetCode.
 
     ====================================================

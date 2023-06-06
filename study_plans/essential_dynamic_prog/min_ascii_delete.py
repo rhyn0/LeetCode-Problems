@@ -71,7 +71,7 @@ class Solution:  # noqa: D101
         return dp[0]
 
 
-def main():
+def main() -> None:
     """712. Minimum ASCII Delete Sum for Two Strings on LeetCode.
 
     ====================================================
@@ -108,5 +108,5 @@ if __name__ == "__main__":
         ^ doctest.FAIL_FAST
         ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

@@ -33,7 +33,7 @@ class Solution:  # noqa: D101
         return -1
 
 
-def main():
+def main() -> None:
     """Find Minimum in Rotated Sorted Array on LeetCode.
 
     ====================================================

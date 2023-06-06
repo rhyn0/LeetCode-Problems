@@ -20,7 +20,8 @@ class Solution:  # noqa: D101
         great_score = 0
         for split in range(1, n):
             great_score = max(
-                great_score, array[:split].count("0") + array[split:].count("1")
+                great_score,
+                array[:split].count("0") + array[split:].count("1"),
             )
 
         return great_score
@@ -41,7 +42,7 @@ class Solution:  # noqa: D101
         return great_score
 
 
-def main():
+def main() -> None:
     """Maximum Score after Splitting a String on LeetCode.
 
     ====================================================

@@ -19,7 +19,11 @@ class Solution:  # noqa: D101
 
     @classmethod
     def in_bound_neighbors(
-        cls, max_row: int, max_col: int, row: int, col: int
+        cls,
+        max_row: int,
+        max_col: int,
+        row: int,
+        col: int,
     ) -> Iterator[tuple[int, int]]:
         """Return cardinal neighbors that are on the grid."""
         for d_row, d_col in pairwise(cls.NEIGHBORS):
@@ -76,7 +80,10 @@ class Solution:  # noqa: D101
             while queue:
                 curr_row, curr_col = queue.popleft()
                 for new_row, new_col in self.in_bound_neighbors(
-                    n, m, curr_row, curr_col
+                    n,
+                    m,
+                    curr_row,
+                    curr_col,
                 ):
                     if grid[new_row][new_col] != self.GridValues.LAND:
                         continue
@@ -93,7 +100,7 @@ class Solution:  # noqa: D101
         return self.untouched_land(grid)
 
 
-def main():
+def main() -> None:
     """Number of Enclaves on LeetCode.
 
     ====================================================
@@ -121,5 +128,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

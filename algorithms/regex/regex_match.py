@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import product
 
 
@@ -65,7 +66,8 @@ class Solution:  # noqa: D101
         # for i, s_char in enumerate(text, start=1):
         #     for j, p_char in enumerate(pattern, start=1):
         for (i, s_char), (col, p_char) in product(
-            enumerate(text, start=1), enumerate(pattern, start=1)
+            enumerate(text, start=1),
+            enumerate(pattern, start=1),
         ):
             if p_char in {s_char, "."}:
                 truth_table[i][col] = truth_table[i - 1][col - 1]
@@ -78,11 +80,49 @@ class Solution:  # noqa: D101
         return truth_table[len(text)][len(pattern)]
 
 
+def main() -> None:
+    """10. Regular Expression Matching on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "aa", "a"
+        >>> example_case_2 = "aa", "a*"
+        >>> example_case_3 = "ab", ".*"
+        >>> test_case_1 = "aab", "c*a*b*"
+        >>> test_case_2 = "aab", "c*a*b"
+        >>> test_case_3 = "ab", ".*c"
+
+    Example 1:
+        >>> sol.isMatch(*example_case_1)
+        False
+
+    Example 2:
+        >>> sol.isMatch(*example_case_2)
+        True
+
+    Example 3:
+        >>> sol.isMatch(*example_case_3)
+        True
+
+    Test 1:
+        >>> sol.isMatch(*test_case_1)
+        True
+
+    Test 2:
+        >>> sol.isMatch(*test_case_2)
+        True
+
+    Test 3:
+        >>> sol.isMatch(*test_case_3)
+        False
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.isMatch("aa", "a"))  # False
-    print(sol.isMatch("aa", "a*"))  # True
-    print(sol.isMatch("ab", ".*"))  # True
-    print(sol.isMatch("aab", "c*a*b*"))  # True
-    print(sol.isMatch("aab", "c*a*b"))  # True
-    print(sol.isMatch("ab", ".*c"))  # False
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

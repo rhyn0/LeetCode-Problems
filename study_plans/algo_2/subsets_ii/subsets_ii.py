@@ -15,7 +15,7 @@ class Solution:  # noqa: D101
         size_n = len(nums)
         ret_lists = []
 
-        def backtracking(first=0, tail=[]):  # noqa: B006
+        def backtracking(first: int = 0, tail: list[int] = []) -> None:  # noqa: B006
             if len(tail) == _k:
                 temp = sorted(tail)
                 if temp not in ret_lists:
@@ -47,7 +47,7 @@ class Solution:  # noqa: D101
         return ret_lists
 
 
-def main():
+def main() -> None:
     """Subsets II on LeetCode.
 
     ====================================================

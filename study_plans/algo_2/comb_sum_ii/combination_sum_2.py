@@ -4,7 +4,9 @@ import doctest
 
 class Solution:  # noqa: D101
     def combinationSum2(  # spec
-        self, candidates: list[int], target: int
+        self,
+        candidates: list[int],
+        target: int,
     ) -> list[list[int]]:
         """Return all combinations using numbers from candidates to sum to target.
 
@@ -18,7 +20,11 @@ class Solution:  # noqa: D101
         ret_lists = []
         candidates.sort()
 
-        def backtrack(remainder: int, start_ind: int, tail=[]):  # noqa: B006
+        def backtrack(
+            remainder: int,
+            start_ind: int,
+            tail: list[int] = [],  # noqa: B006
+        ) -> None:
             if remainder == 0:
                 ret_lists.append(list(tail))
                 return
@@ -36,7 +42,7 @@ class Solution:  # noqa: D101
         return ret_lists
 
 
-def main():
+def main() -> None:
     """Combination Sum II on LeetCode.
 
     ====================================================

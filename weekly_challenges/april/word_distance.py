@@ -46,7 +46,10 @@ class Solution:  # noqa: D101
         return min(abs(add(*pair)) for pair in valid_word_pairs(indices))
 
     def shortestWordDistanceSpace(
-        self, word_list: list[str], word1: str, word2: str
+        self,
+        word_list: list[str],
+        word1: str,
+        word2: str,
     ) -> int:
         """Return result same as above but using O(1) space.
 
@@ -72,12 +75,16 @@ class Solution:  # noqa: D101
             minima = min_compare()
         # if invalid problem given
         if isinstance(minima, float):
-            raise TypeError("invalid")
+            msg = "invalid"
+            raise TypeError(msg)
 
         return minima
 
     def shortestWordDistanceObj(
-        self, word_list: list[str], word1: str, word2: str
+        self,
+        word_list: list[str],
+        word1: str,
+        word2: str,
     ) -> int:
         """Return same as above using a custom object in the sorting list."""
 
@@ -102,12 +109,13 @@ class Solution:  # noqa: D101
             min_dist = min(min_dist, sec_match[0] - first_match[0])
 
         if isinstance(min_dist, float):
-            raise TypeError("invalid")
+            msg = "invalid"
+            raise TypeError(msg)
 
         return min_dist
 
 
-def main():
+def main() -> None:
     """Minimum Word Distance III on LeetCode.
 
     ====================================================
@@ -159,5 +167,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

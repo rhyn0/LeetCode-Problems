@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -27,12 +28,34 @@ class Solution:  # noqa: D101
         return ret_count
 
 
+def main() -> None:
+    """Problem Name on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [10, 5, 2, 6], 100
+        >>> example_case_2 = [1, 2, 3], 0
+        >>> test_case_1 = [10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3],19
+
+    Example 1:
+        >>> sol.numSubarrayProductLessThanK(*example_case_1)
+        8
+
+    Example 2:
+        >>> sol.numSubarrayProductLessThanK(*example_case_2)
+        0
+
+    Test 1:
+        >>> sol.numSubarrayProductLessThanK(*test_case_1)
+        18
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.numSubarrayProductLessThanK([10, 5, 2, 6], 100))  # 8
-    print(sol.numSubarrayProductLessThanK([1, 2, 3], 0))  # 0
-    print(
-        sol.numSubarrayProductLessThanK(
-            [10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3], 19
-        )
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
     )

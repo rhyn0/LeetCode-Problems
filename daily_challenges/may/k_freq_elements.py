@@ -41,7 +41,7 @@ class Solution:  # noqa: D101
         ]
 
 
-def main():
+def main() -> None:
     """347. Top K Frequent Elements on LeetCode.
 
     ====================================================
@@ -73,5 +73,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

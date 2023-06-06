@@ -44,7 +44,7 @@ class Solution:  # noqa: D101
         if size_n == 0:
             return ret_list
 
-        def dfs(curr_len: int, tail=""):
+        def dfs(curr_len: int, tail: str = "") -> None:
             if curr_len == size_n:
                 ret_list.append(tail)
                 return
@@ -55,7 +55,7 @@ class Solution:  # noqa: D101
         return ret_list
 
 
-def main():
+def main() -> None:
     """Letter Combinations of a Phone Number on LeetCode.
 
     ====================================================

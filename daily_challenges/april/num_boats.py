@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         return used_boats
 
 
-def main():
+def main() -> None:
     """881. Boats to Save People on LeetCode.
 
     ====================================================
@@ -71,5 +71,5 @@ if __name__ == "__main__":
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         # ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

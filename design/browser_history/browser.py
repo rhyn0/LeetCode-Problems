@@ -8,7 +8,7 @@ class BrowserHistory:
     Allows for visiting new pages and traversing recent pages.
     """
 
-    def __init__(self, homepage: str):
+    def __init__(self, homepage: str) -> None:
         """Start browser at a specific page."""
         self._curr_idx = 0
         self.pages = [homepage]
@@ -38,7 +38,7 @@ class BrowserHistory:
         return self.pages[self._curr_idx]
 
 
-def main():
+def main() -> None:
     """Design Browser History on LeetCode.
 
     ====================================================
@@ -68,5 +68,6 @@ def main():
 
 if __name__ == "__main__":
     doctest.testmod(
-        verbose=True, optionflags=doctest.REPORTING_FLAGS | doctest.ELLIPSIS
+        verbose=True,
+        optionflags=doctest.REPORTING_FLAGS | doctest.ELLIPSIS,
     )

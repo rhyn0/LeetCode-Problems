@@ -7,7 +7,9 @@ import doctest
 class Solution:  # noqa: D101
     @staticmethod
     def _get_table_relations(
-        grid: list[list[int]], row: int, col: int
+        grid: list[list[int]],
+        row: int,
+        col: int,
     ) -> tuple[int, int, int]:
         # hardcoded reliance on the below, diagonal bottom right, and right
         return (grid[row + 1][col], grid[row + 1][col + 1], grid[row][col + 1])
@@ -61,13 +63,13 @@ class Solution:  # noqa: D101
                     dp[word2_idx] = prev_dp[word2_idx + 1]
                 else:
                     dp[word2_idx] = 1 + min(
-                        self._get_table_relations([dp, prev_dp], 0, word2_idx)
+                        self._get_table_relations([dp, prev_dp], 0, word2_idx),
                     )
             prev_dp = dp[:]
         return dp[0]
 
 
-def main():
+def main() -> None:
     """72. Edit Distance on LeetCode.
 
     ====================================================
@@ -123,5 +125,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

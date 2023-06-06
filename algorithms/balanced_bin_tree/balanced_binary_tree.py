@@ -1,11 +1,19 @@
+from __future__ import annotations
+
 # Standard Library
+import doctest
 
 
 # Definition for a binary tree node.
 class TreeNode:  # noqa: D101
     __slots__ = "val", "left", "right"
 
-    def __init__(self, val=0, left=None, right=None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -39,19 +47,43 @@ class Solution:  # noqa: D101
         return dfs(root) >= 0
 
 
+def main() -> None:
+    """110. Balanced Binary Tree on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = TreeNode(\
+            3,\
+            left=TreeNode(9),\
+            right=TreeNode(20, left=TreeNode(15), right=TreeNode(7)))
+        >>> example_case_2 = TreeNode(\
+                1,\
+                left=TreeNode(\
+                    2,\
+                    left=TreeNode(3, left=TreeNode(4), right=TreeNode(4)),\
+                    right=TreeNode(3)),\
+                right=TreeNode(2))
+        >>> example_case_3 = None
+
+    Example 1:
+        >>> sol.isBalanced(example_case_1)
+        True
+
+    Example 2:
+        >>> sol.isBalanced(example_case_2)
+        False
+
+    Example 3:
+        >>> sol.isBalanced(example_case_3)
+        True
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    root1 = TreeNode(
-        3, left=TreeNode(9), right=TreeNode(20, left=TreeNode(15), right=TreeNode(7))
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
     )
-    root2 = TreeNode(
-        1,
-        left=TreeNode(
-            2, left=TreeNode(3, left=TreeNode(4), right=TreeNode(4)), right=TreeNode(3)
-        ),
-        right=TreeNode(2),
-    )
-    root3 = None
-    print(sol.isBalanced(root1))  # True
-    print(sol.isBalanced(root2))  # False
-    print(sol.isBalanced(root3))  # True

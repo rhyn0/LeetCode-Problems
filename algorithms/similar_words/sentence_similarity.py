@@ -5,7 +5,10 @@ import doctest
 
 class Solution:  # noqa: D101
     def areSentencesSimilar(  # spec
-        self, sentence1: list[str], sentence2: list[str], similar_pairs: list[list[str]]
+        self,
+        sentence1: list[str],
+        sentence2: list[str],
+        similar_pairs: list[list[str]],
     ) -> bool:
         """Return if two sentences are similar or not.
 
@@ -38,7 +41,7 @@ class Solution:  # noqa: D101
         return True
 
 
-def main():
+def main() -> None:
     """Sentence Similarity on LeetCode.
 
     ====================================================

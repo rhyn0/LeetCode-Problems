@@ -38,7 +38,7 @@ class Solution:  # noqa: D101
         return True
 
 
-def main():
+def main() -> None:
     """Lemonade Change on LeetCode.
 
     ====================================================

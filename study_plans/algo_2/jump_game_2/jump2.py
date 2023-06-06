@@ -23,7 +23,7 @@ class Solution:  # noqa: D101
         return nums[0]
 
 
-def main():
+def main() -> None:
     """Jump Game II on LeetCode.
 
     ====================================================

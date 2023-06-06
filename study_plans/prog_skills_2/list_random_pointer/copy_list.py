@@ -42,7 +42,7 @@ class Solution:  # noqa: D101
         return head
 
 
-def main():
+def main() -> None:
     """Copy List with Random Pointer on LeetCode.
 
     ====================================================
@@ -72,7 +72,7 @@ class Node:  # noqa: D101
         x: int,
         next_: Node | None = None,
         random: Node | None = None,
-    ):
+    ) -> None:
         self.val = int(x)
         self.next = next_
         self.random = random

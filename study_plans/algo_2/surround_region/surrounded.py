@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         self.ROW_MAX, self.COL_MAX = len(board), len(board[0])
 
         border = list(product(range(self.ROW_MAX), (0, self.COL_MAX - 1))) + list(
-            product((0, self.ROW_MAX - 1), range(self.COL_MAX))
+            product((0, self.ROW_MAX - 1), range(self.COL_MAX)),
         )
         for b_row, b_col in border:
             self.dfs(board, b_row, b_col)
@@ -44,7 +44,7 @@ class Solution:  # noqa: D101
                     board[row][col] = "O"
 
 
-def main():
+def main() -> None:
     """Surrounded Regions on LeetCode.
 
     ====================================================
@@ -72,5 +72,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

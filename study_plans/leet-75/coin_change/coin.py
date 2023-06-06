@@ -35,7 +35,7 @@ class Solution:  # noqa: D101
         return num_coins[-1] if num_coins[-1] != 0 else -1
 
 
-def main():
+def main() -> None:
     """Coin Change on LeetCode.
 
     ====================================================

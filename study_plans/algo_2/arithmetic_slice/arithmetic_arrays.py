@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         return total_slices
 
 
-def main():
+def main() -> None:
     """Arithmetic Slices on LeetCode.
 
     ====================================================

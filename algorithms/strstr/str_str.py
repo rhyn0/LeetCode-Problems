@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     def strStr(self, haystack: str, needle: str) -> int:  # spec
         """Find the string needle in the given string haystack.
@@ -20,9 +24,39 @@ class Solution:  # noqa: D101
         return -1
 
 
+def main() -> None:
+    """28. Find the Index of the First Occurrence in a String on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "hello", "ll"
+        >>> example_case_2 = "aaaaa", "bba"
+        >>> self_test_1 = "aaa", ""
+        >>> self_test_2 = "a", "a"
+
+    Example 1:
+        >>> sol.strStr(*example_case_1)
+        2
+
+    Example 2:
+        >>> sol.strStr(*example_case_2)
+        -1
+
+    Self Test 1:
+        >>> sol.strStr(*self_test_1)
+        0
+
+    Self Test 2:
+        >>> sol.strStr(*self_test_2)
+        0
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.strStr("hello", "ll"))  # 2
-    print(sol.strStr("aaaaa", "bba"))  # -1
-    print(sol.strStr("aaa", ""))  # 0
-    print(sol.strStr("a", "a"))  # 0
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

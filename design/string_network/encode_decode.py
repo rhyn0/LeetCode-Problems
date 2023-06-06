@@ -26,7 +26,7 @@ class Codec:  # noqa: D101
         return ret_list
 
 
-def main():
+def main() -> None:
     """Encode and Decode Strings on LeetCode.
 
     This is a design question so do your best to come up with

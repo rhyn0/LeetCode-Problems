@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -42,7 +43,29 @@ class Solution:  # noqa: D101
         return ret_list
 
 
+def main() -> None:
+    """503. Next Greater Element II on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [1, 2, 1]
+        >>> example_case_2 = [1, 2, 3, 4, 3]
+
+    Example 1:
+        >>> sol.nextGreaterElements(example_case_1)
+        [2, -1, 2]
+
+    Example 2:
+        >>> sol.nextGreaterElements(example_case_2)
+        [2, 3, 4, -1, 4]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.nextGreaterElements([1, 2, 1]))  # [2, -1, 2]
-    print(sol.nextGreaterElements([1, 2, 3, 4, 3]))  # [2, 3, 4, -1, 4]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

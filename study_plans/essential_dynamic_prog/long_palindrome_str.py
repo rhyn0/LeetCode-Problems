@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         return in_str[long_start : long_end + 1]
 
 
-def main():
+def main() -> None:
     """Longest Palindromic Substring on LeetCode.
 
     ====================================================
@@ -55,5 +55,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

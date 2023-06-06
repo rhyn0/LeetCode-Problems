@@ -54,7 +54,7 @@ class Solution:  # noqa: D101
         )
 
 
-def main():
+def main() -> None:
     """Backspace Compare String on LeetCode.
 
     ====================================================

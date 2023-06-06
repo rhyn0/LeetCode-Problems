@@ -19,8 +19,8 @@ class Solution:  # noqa: D101
         Maximize savings of distance by choosing the most prime nut.
 
         Args:
-            height (int): Height of the grid
-            width (int): Width of the grid
+            height (int): Height of the grid, UNUSED
+            width (int): Width of the grid, UNUSED
             tree (List[int]): X,Y location of home tree
             squirrel (List[int]): X, Y location of squirrel at start
             nuts (List[List[int]]): List of X, Y locations of nuts on board
@@ -28,6 +28,7 @@ class Solution:  # noqa: D101
         Returns:
             int: Minimum distance to collect all nuts
         """
+        width = width * height  # need to use
 
         def manhattan_distance(obj1: Coordinate, obj2: Coordinate) -> int:
             return abs(obj1[0] - obj2[0]) + abs(obj1[1] - obj2[1])
@@ -43,13 +44,14 @@ class Solution:  # noqa: D101
             total_distance_travel += nut_tree_dist * 2
 
             path_diff = max(
-                path_diff, nut_tree_dist - manhattan_distance(squirrel, nut)
+                path_diff,
+                nut_tree_dist - manhattan_distance(squirrel, nut),
             )
 
         return total_distance_travel - int(path_diff)
 
 
-def main():
+def main() -> None:
     """Squirrel Simulation on LeetCode.
 
     ====================================================
@@ -81,4 +83,8 @@ def main():
 
 
 if __name__ == "__main__":
-    doctest.testmod(verbose=True)
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

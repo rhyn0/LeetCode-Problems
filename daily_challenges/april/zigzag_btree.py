@@ -1,11 +1,18 @@
 """Daily Challenge from April 18, 2023."""
+from __future__ import annotations
+
 # Standard Library
 import doctest
 from functools import cache
 
 
 class TreeNode:  # noqa: D101
-    def __init__(self, val=0, left=None, right=None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -26,7 +33,7 @@ class InvalidBinaryTreeError(Exception):
 def build_tree(node_list: list[int | None]) -> TreeNode:
     """Return binary tree made of TreeNode from inorder array."""
     if not node_list or node_list[0] is None:
-        raise InvalidBinaryTreeError()
+        raise InvalidBinaryTreeError
 
     tree_node_que = []
     input_queue = node_list[1:]
@@ -70,16 +77,16 @@ class Solution:  # noqa: D101
         """
         longest_path = 0
 
-        def dfs(node: TreeNode | None, go_left: bool, curr_path: int) -> None:
+        def dfs(node: TreeNode | None, curr_path: int, *, go_left: bool) -> None:
             if node is None:
                 return
             nonlocal longest_path
             longest_path = max(longest_path, curr_path)
-            dfs(node.left, False, (curr_path + 1) if go_left else 1)
-            dfs(node.right, True, (curr_path + 1) if not go_left else 1)
+            dfs(node.left, (curr_path + 1) if go_left else 1, go_left=False)
+            dfs(node.right, (curr_path + 1) if not go_left else 1, go_left=True)
 
-        dfs(root, False, 0)
-        dfs(root, True, 0)
+        dfs(root, 0, go_left=False)
+        dfs(root, 0, go_left=True)
         return longest_path
 
     def longestZigZagDP(self, root: TreeNode | None) -> int:
@@ -126,7 +133,7 @@ class Solution:  # noqa: D101
         return longest_path
 
 
-def main():
+def main() -> None:
     """Longest ZigZag Path in a Binary Tree on LeetCode.
 
     ====================================================
@@ -178,5 +185,5 @@ if __name__ == "__main__":
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         # ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

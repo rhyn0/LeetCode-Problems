@@ -54,7 +54,7 @@ class Solution:  # noqa: D101
         return low
 
 
-def main():
+def main() -> None:
     """Kth Smallest Element in a Sorted Matrix on LeetCode.
 
     ====================================================

@@ -38,7 +38,7 @@ class Solution:  # noqa: D101
         return substrings
 
 
-def main():
+def main() -> None:
     """Optimal Partition of String on LeetCode.
 
     ====================================================
@@ -66,5 +66,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

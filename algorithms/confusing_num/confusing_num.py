@@ -49,7 +49,7 @@ class Solution:  # noqa: D101
         return rotate_num != num
 
 
-def main():
+def main() -> None:
     """Confusing Number on LeetCode.
 
     ====================================================

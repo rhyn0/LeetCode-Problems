@@ -61,7 +61,8 @@ class Solution:  # noqa: D101
                     subproblem_max_val,
                     curr_pile_prefix
                     + search_subproblem(
-                        avail_coins - curr_use_coin - 1, pile_available - 1
+                        avail_coins - curr_use_coin - 1,
+                        pile_available - 1,
                     ),
                 )
             return subproblem_max_val
@@ -69,7 +70,7 @@ class Solution:  # noqa: D101
         return search_subproblem(k, len(piles) - 1)
 
 
-def main():
+def main() -> None:
     """Maximum Value of K Coins From Piles on LeetCode.
 
     ====================================================
@@ -106,5 +107,5 @@ if __name__ == "__main__":
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         # ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

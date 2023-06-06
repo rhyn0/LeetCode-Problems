@@ -29,7 +29,7 @@ class Solution:  # noqa: D101
         return max(robbers(nums[1:]), robbers(nums[:-1]))
 
 
-def main():
+def main() -> None:
     """House Robber II on LeetCode.
 
     ====================================================

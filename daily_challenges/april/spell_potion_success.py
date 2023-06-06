@@ -22,7 +22,10 @@ class Solution:  # noqa: D101
         return left if left < len(array) else -1
 
     def successfulPairs(
-        self, spells: list[int], potions: list[int], success: int
+        self,
+        spells: list[int],
+        potions: list[int],
+        success: int,
     ) -> list[int]:
         """Return number of spell and potion pairs that are strong enough.
 
@@ -49,7 +52,10 @@ class Solution:  # noqa: D101
         return success_pairs
 
     def successfulPairsBuilt(
-        self, spells: list[int], potions: list[int], success: int
+        self,
+        spells: list[int],
+        potions: list[int],
+        success: int,
     ) -> list[int]:
         """Return same as above using `bisect` to find insertion point."""
         num_potions = len(potions)
@@ -58,7 +64,8 @@ class Solution:  # noqa: D101
             (num_potions - insert_idx)
             if (
                 insert_idx := bisect.bisect_left(
-                    potions, ceil(success / spell_strength)
+                    potions,
+                    ceil(success / spell_strength),
                 )
             )
             != -1
@@ -67,7 +74,10 @@ class Solution:  # noqa: D101
         ]
 
     def successfulPairsTwo(
-        self, spells: list[int], potions: list[int], success: int
+        self,
+        spells: list[int],
+        potions: list[int],
+        success: int,
     ) -> list[int]:
         """Return same as above but using a two pointer method."""
         num_potions = len(potions)
@@ -83,7 +93,7 @@ class Solution:  # noqa: D101
         return success_pairs
 
 
-def main():
+def main() -> None:
     """2300. Successful Pairs of Spells and Potions on LeetCode.
 
     ====================================================
@@ -124,5 +134,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

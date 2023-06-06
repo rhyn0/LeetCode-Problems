@@ -12,7 +12,7 @@ class Node:  # noqa: D101
         left: Node | None = None,
         right: Node | None = None,
         next_: Node | None = None,
-    ):
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -58,7 +58,7 @@ class Solution:  # noqa: D101
         return root
 
 
-def main():
+def main() -> None:
     """Populating Next Right Pointers in Each Node II on LeetCode.
 
     ====================================================
@@ -80,5 +80,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

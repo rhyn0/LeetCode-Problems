@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import cycle
 
 
@@ -45,11 +46,29 @@ class Solution:  # noqa: D101
         return ret_list
 
 
+def main() -> None:
+    """Problem Name on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        >>> example_case_2 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+
+    Example 1:
+        >>> sol.spiralOrder(example_case_1)
+        [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+    Example 2:
+        >>> sol.spiralOrder(example_case_2)
+        [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(
-        sol.spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-    )  # [1, 2, 3, 6, 9, 8, 7, 4, 5]
-    print(
-        sol.spiralOrder([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
-    )  # [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

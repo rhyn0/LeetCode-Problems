@@ -25,7 +25,7 @@ class Solution:  # noqa: D101
         return can_make[subset_sum]
 
 
-def main():
+def main() -> None:
     """Partition Equal Subset Sum on LeetCode.
 
     ====================================================

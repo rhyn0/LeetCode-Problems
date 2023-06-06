@@ -1,10 +1,17 @@
+from __future__ import annotations
+
 # Standard Library
 from collections.abc import Generator
 import doctest
 
 
 class TreeNode:  # noqa: D101
-    def __init__(self, val=0, left=None, right=None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -19,7 +26,7 @@ class BSTIterator:
     Iterates over tree in-order.
     """
 
-    def __init__(self, root: TreeNode):
+    def __init__(self, root: TreeNode) -> None:
         """Initialize the iterator given a Tree.
 
         Tree must contain at least 1 node.
@@ -47,7 +54,7 @@ class BSTIterator:
             int | None: int for values of Tree, otherwise None
         """
         res, self._next = self._next, next(self.it, None)
-        return res  # noqa: R504
+        return res
 
     def _iterate(self, node: TreeNode | None) -> Generator[int, None, None]:
         if node is None:
@@ -57,7 +64,7 @@ class BSTIterator:
         yield from self._iterate(node.right)
 
 
-def main():
+def main() -> None:
     """Binary Search Tree Iterator on LeetCode.
 
     ====================================================

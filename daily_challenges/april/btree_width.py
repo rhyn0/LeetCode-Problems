@@ -1,10 +1,17 @@
 """Daily Challenge from April 19, 2023."""
+from __future__ import annotations
+
 # Standard Library
 import doctest
 
 
 class TreeNode:  # noqa: D101
-    def __init__(self, val=0, left=None, right=None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -25,7 +32,7 @@ class InvalidBinaryTreeError(Exception):
 def build_tree(node_list: list[int | None]) -> TreeNode:
     """Return binary tree made of TreeNode from inorder array."""
     if not node_list or node_list[0] is None:
-        raise InvalidBinaryTreeError()
+        raise InvalidBinaryTreeError
     tree_node_que = []
     input_queue = node_list[1:]
     root_node = TreeNode(node_list[0])
@@ -101,7 +108,7 @@ class Solution:  # noqa: D101
         return max_width
 
 
-def main():
+def main() -> None:
     """Maximum Width of a Binary Tree on LeetCode.
 
     ====================================================
@@ -136,5 +143,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

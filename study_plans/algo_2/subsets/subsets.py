@@ -32,7 +32,7 @@ class Solution:  # noqa: D101
         size_n = len(nums)
         ret_lists = []
 
-        def backtrack(start=0, tail=[]):  # noqa: B006
+        def backtrack(start: int = 0, tail: list[int] = []) -> None:  # noqa: B006
             if len(tail) == _k:
                 ret_lists.append(tail[:])
                 return
@@ -48,7 +48,7 @@ class Solution:  # noqa: D101
         return ret_lists
 
 
-def main():
+def main() -> None:
     """Subsets on LeetCode.
 
     ====================================================

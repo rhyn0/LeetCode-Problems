@@ -10,14 +10,10 @@ kinds:
   - label: Added
     auto: minor
   - label: Changed
-    auto: major
-  - label: Deprecated
     auto: minor
   - label: Removed
     auto: major
   - label: Fixed
-    auto: patch
-  - label: Security
     auto: patch
 newlines:
   afterChange: 0
@@ -48,3 +44,5 @@ replacements:
   - path: pyproject.toml
     find: '^version = ".*"'
     replace: 'version = "{{.VersionNoPrefix}}"'
+body:
+  block: true

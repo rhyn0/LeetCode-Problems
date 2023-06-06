@@ -31,7 +31,7 @@ class Solution:  # noqa: D101
         return len(tasks) + idle_time
 
 
-def main():
+def main() -> None:
     """Task Scheduler on LeetCode.
 
     ====================================================

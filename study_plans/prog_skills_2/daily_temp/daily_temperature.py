@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     def dailyTemperatures(self, temperatures: list[int]) -> list[int]:
         """Return the number of days until warmer temperature.
@@ -39,14 +43,34 @@ class Solution:  # noqa: D101
         return ret_list
 
 
-if __name__ == "__main__":
-    """This is a slow implementation and not a fully optimized one.
+def main() -> None:
+    """739. Daily Temperatures on LeetCode.
 
-    Should have iterated from the back.
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [73, 74, 75, 71, 69, 72, 76, 73]
+        >>> example_case_2 = [30, 40, 50, 60]
+        >>> example_case_3 = [30, 60, 90]
+
+    Example 1:
+        >>> sol.dailyTemperatures(example_case_1)
+        [1, 1, 4, 2, 1, 1, 0, 0]
+
+    Example 2:
+        >>> sol.dailyTemperatures(example_case_2)
+        [1, 1, 1, 0]
+
+    Example 3:
+        >>> sol.dailyTemperatures(example_case_3)
+        [1, 1, 0]
     """
-    sol = Solution()
-    print(
-        sol.dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])
-    )  # [1, 1, 4, 2, 1, 1, 0, 0]
-    print(sol.dailyTemperatures([30, 40, 50, 60]))  # [1, 1, 1, 0]
-    print(sol.dailyTemperatures([30, 60, 90]))  # [1, 1, 0]
+
+
+if __name__ == "__main__":
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

@@ -32,7 +32,7 @@ class Solution:  # noqa: D101
         return length * 2
 
 
-def main():
+def main() -> None:
     """Longest Palindrome by Concatenating two Letter Words on LeetCode.
 
     ====================================================

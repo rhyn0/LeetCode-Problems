@@ -6,7 +6,10 @@ import doctest
 
 class Solution:  # noqa: D101
     def numBusesToDestination(  # spec
-        self, routes: list[list[int]], source: int, target: int
+        self,
+        routes: list[list[int]],
+        source: int,
+        target: int,
     ) -> int:
         """Return minimum number of buses to get from source stop to target stop.
 
@@ -43,7 +46,7 @@ class Solution:  # noqa: D101
         return -1
 
 
-def main():
+def main() -> None:
     """Bus Routes on LeetCode.
 
     ====================================================

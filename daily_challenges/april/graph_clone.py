@@ -44,7 +44,9 @@ def is_cloned_graph(n1: Node, n2: Node) -> bool:
             return False
         seen_nodes.add(node1.val)
         for child1, child2 in zip(
-            sorted(node1.neighbors), sorted(node2.neighbors), strict=True
+            sorted(node1.neighbors),
+            sorted(node2.neighbors),
+            strict=True,
         ):
             if child1.val in seen_nodes or child2.val in seen_nodes:
                 continue
@@ -124,7 +126,7 @@ class Solution:  # noqa: D101
                         neighbor_node
                         for neighbor_node in curr_node.neighbors
                         if neighbor_node.val not in adj_dict
-                    ]
+                    ],
                 )
 
         bfs(node)
@@ -132,7 +134,7 @@ class Solution:  # noqa: D101
         return new_nodes[0]
 
 
-def main():
+def main() -> None:
     """Clone Graph on LeetCode.
 
     ====================================================
@@ -171,5 +173,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

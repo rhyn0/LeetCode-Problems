@@ -5,7 +5,11 @@ import doctest
 
 
 class ListNode:  # noqa: D101
-    def __init__(self, val: int = 0, next_: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        val: int = 0,
+        next_: ListNode | None = None,
+    ) -> None:
         self.val = val
         self.next = next_
 
@@ -53,7 +57,7 @@ class Solution:  # noqa: D101
         return head
 
 
-def main():
+def main() -> None:
     """Odd Even Linked List on LeetCode.
 
     ====================================================

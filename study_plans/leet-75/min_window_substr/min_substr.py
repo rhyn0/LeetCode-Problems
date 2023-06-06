@@ -40,7 +40,7 @@ class Solution:  # noqa: D101
         return s[result_slice] if length_min != float("inf") else ""
 
 
-def main():
+def main() -> None:
     """Minimum Window Substring on LeetCode.
 
     ====================================================

@@ -9,7 +9,11 @@ class Solution:  # noqa: D101
 
     @classmethod
     def valid_neighbors(
-        cls, curr_x: int, curr_y: int, row_max: int, col_max: int
+        cls,
+        curr_x: int,
+        curr_y: int,
+        row_max: int,
+        col_max: int,
     ) -> Iterator[tuple[int, int]]:
         """Generate in bound neighbors for a given 2D point."""
         for dx, dy in pairwise(cls.NEIGHBORS_TUP):
@@ -59,7 +63,7 @@ class Solution:  # noqa: D101
         return [list(pos) for pos in pac_set.intersection(atl_set)]
 
 
-def main():
+def main() -> None:
     """Pacific Atlantic Water Flow on LeetCode.
 
     ====================================================

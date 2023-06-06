@@ -16,7 +16,7 @@ class Solution:  # noqa: D101
         """
         ret_list = []
 
-        def backtrack(open_num: int, close_num: int, tail=""):
+        def backtrack(open_num: int, close_num: int, tail: str = "") -> None:
             if open_num == num_parens == close_num:
                 ret_list.append(tail)
                 return
@@ -29,7 +29,7 @@ class Solution:  # noqa: D101
         return ret_list
 
 
-def main():
+def main() -> None:
     """Genereate Parentheses on LeetCode.
 
     ====================================================

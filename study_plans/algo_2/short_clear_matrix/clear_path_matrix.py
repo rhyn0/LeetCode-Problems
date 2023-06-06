@@ -1,5 +1,6 @@
 # Standard Library
 from collections import deque
+from collections.abc import Iterator
 import doctest
 
 
@@ -29,7 +30,7 @@ class Solution:  # noqa: D101
         """
         matrix_size = len(grid)
 
-        def clear_neighbors(row: int, col: int):
+        def clear_neighbors(row: int, col: int) -> Iterator[tuple[int, int]]:
             yield from (
                 (row + d_row, col + d_col)
                 for d_row, d_col in self.DIRECTIONS
@@ -56,7 +57,7 @@ class Solution:  # noqa: D101
         return -1
 
 
-def main():
+def main() -> None:
     """Shortest Clear Path in Binary matrix on LeetCode.
 
     ====================================================

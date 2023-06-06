@@ -5,7 +5,11 @@ import doctest
 
 
 class ListNode:  # noqa: D101
-    def __init__(self, value: int = 0, next_: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        value: int = 0,
+        next_: ListNode | None = None,
+    ) -> None:
         self.val = value
         self.next = next_
 
@@ -37,7 +41,7 @@ class Solution:  # noqa: D101
         return tmp_head.next
 
 
-def main():
+def main() -> None:
     """Remove Duplicates from Sorted List II on LeetCode.
 
     ====================================================

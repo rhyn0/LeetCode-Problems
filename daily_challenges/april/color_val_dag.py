@@ -15,7 +15,11 @@ class Solution:  # noqa: D101
 
     @classmethod
     def calculate_adjacency_degree(
-        cls, colors: str, edge_list: list[list[int]], *, bidir: bool = True
+        cls,
+        colors: str,
+        edge_list: list[list[int]],
+        *,
+        bidir: bool = True,
     ) -> tuple[list[list[int]], list[int]]:
         """Return adjacency list and in degree for each node in given."""
         adj_list = [[] for _ in range(len(colors))]
@@ -94,7 +98,9 @@ class Solution:  # noqa: D101
 
             for neighbor in adjacency_list[curr_node]:
                 color_path_counts = self.update_color_counts(
-                    color_path_counts, curr_node, neighbor
+                    color_path_counts,
+                    curr_node,
+                    neighbor,
                 )
 
                 degree_list[neighbor] -= 1
@@ -122,7 +128,10 @@ class Solution:  # noqa: D101
                 if dfs(neighbor, counts) == self.INF:
                     return self.INF
                 counts = self.update_color_counts(
-                    counts, curr_node, neighbor, inward=False
+                    counts,
+                    curr_node,
+                    neighbor,
+                    inward=False,
                 )
             counts[curr_node][ord(colors[curr_node]) - self.COLOR_START] += 1
             stack_state[curr_node] = False
@@ -134,7 +143,7 @@ class Solution:  # noqa: D101
         return max_path_color if max_path_color != self.INF else -1
 
 
-def main():
+def main() -> None:
     """Largest Color Value in a Directed Graph on LeetCode.
 
     ====================================================
@@ -178,5 +187,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

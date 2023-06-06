@@ -23,7 +23,7 @@ class Solution:  # noqa: D101
         return min(
             array[
                 max(curr_idx - window_size // 2, 0) : (curr_idx + window_size // 2) + 1
-            ]
+            ],
         )
 
     def minFallingPathSum(self, matrix: list[list[int]]) -> int:
@@ -48,7 +48,7 @@ class Solution:  # noqa: D101
         return min(prev_row)
 
 
-def main():
+def main() -> None:
     """931. Minimum Falling Path Sum on LeetCode.
 
     ====================================================
@@ -72,5 +72,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

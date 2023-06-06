@@ -29,7 +29,7 @@ class Solution:  # noqa: D101
         return low
 
 
-def main():
+def main() -> None:
     """Find Peak Element on LeetCode.
 
     ====================================================

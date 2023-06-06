@@ -32,7 +32,7 @@ class Solution:  # noqa: D101
         return dfs(0)
 
 
-def main():
+def main() -> None:
     """All Paths from Source to Target on LeetCode.
 
     ====================================================

@@ -1,6 +1,7 @@
 # Standard Library
 from collections import Counter
 from collections import defaultdict
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -21,10 +22,34 @@ class Solution:  # noqa: D101
         return list(count_dict.values())
 
 
+def main() -> None:
+    """49. Group Anagrams on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = ["eat", "tea", "tan", "ate", "nat", "bat"]
+        >>> example_case_2 = [""]
+        >>> example_case_3 = ["a"]
+
+    Example 1:
+        >>> sol.groupAnagrams(example_case_1)
+        [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
+
+    Example 2:
+        >>> sol.groupAnagrams(example_case_2)
+        [['']]
+
+    Example 3:
+        >>> sol.groupAnagrams(example_case_3)
+        [['a']]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(
-        sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
-    )  # [["bat"],["nat","tan"],["ate","eat","tea"]]
-    print(sol.groupAnagrams([""]))  # [[""]]
-    print(sol.groupAnagrams(["a"]))  # [["a"]]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

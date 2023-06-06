@@ -23,14 +23,14 @@ class Solution:  # noqa: D101
                 curr_row.append(
                     (min(prev_row[idx], curr_row[-1], prev_row[idx - 1]) + 1)
                     if val == "1"
-                    else 0
+                    else 0,
                 )
                 max_area = max(max_area, curr_row[-1])
             prev_row = curr_row
         return max_area**2
 
 
-def main():
+def main() -> None:
     """221. Maximal Square on LeetCode.
 
     ====================================================
@@ -78,5 +78,5 @@ if __name__ == "__main__":
         ^ doctest.FAIL_FAST
         ^ doctest.REPORT_ONLY_FIRST_FAILURE
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

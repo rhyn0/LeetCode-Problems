@@ -44,7 +44,7 @@ class Solution:  # noqa: D101
         return data_tab[-1]
 
 
-def main():
+def main() -> None:
     """Unique Paths on LeetCode.
 
     ====================================================

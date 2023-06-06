@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import pairwise
 
 
@@ -81,9 +82,39 @@ class Solution:  # noqa: D101
         return (h_max * w_max) % (10**9 + 7)
 
 
+def main() -> None:
+    """1465. Maximum Area of a Piece of Cake on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = 5, 4, [1, 2, 4], [1, 3]
+        >>> example_case_2 = 5, 4, [3, 1], [1]
+        >>> test_case_1 = 5, 4, [3], [3]
+        >>> test_case_2 = 5, 2, [3, 1, 2], [1]
+
+    Example 1:
+        >>> sol.maxArea(*example_case_1)
+        4
+
+    Example 2:
+        >>> sol.maxArea(*example_case_2)
+        6
+
+    Test 1:
+        >>> sol.maxArea(*test_case_1)
+        9
+
+    Test 2:
+        >>> sol.maxArea(*test_case_2)
+        2
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.maxArea(h=5, w=4, horiz_cuts=[1, 2, 4], vertical_cuts=[1, 3]))  # 4
-    print(sol.maxArea(h=5, w=4, horiz_cuts=[3, 1], vertical_cuts=[1]))  # 6
-    print(sol.maxArea(h=5, w=4, horiz_cuts=[3], vertical_cuts=[3]))  # 9
-    print(sol.maxArea(h=5, w=2, horiz_cuts=[3, 1, 2], vertical_cuts=[1]))  # 2
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

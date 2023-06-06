@@ -1,9 +1,16 @@
 from __future__ import annotations
 
+# Standard Library
+import doctest
+
 
 # Definition for singly-linked list.
 class ListNode:  # noqa: D101
-    def __init__(self, value=0, next_: ListNode | None = None):  # noqa: D107
+    def __init__(  # noqa: D107
+        self,
+        value: int = 0,
+        next_: ListNode | None = None,
+    ) -> None:
         self.val = value
         self.next = next_
 
@@ -14,8 +21,11 @@ class ListNode:  # noqa: D101
 # Definition for a binary tree node.
 class TreeNode:  # noqa: D101
     def __init__(  # noqa: D107
-        self, value=0, left: TreeNode | None = None, right: TreeNode | None = None
-    ):
+        self,
+        value: int = 0,
+        left: TreeNode | None = None,
+        right: TreeNode | None = None,
+    ) -> None:
         self.val = value
         self.left = left
         self.right = right
@@ -45,7 +55,8 @@ class Solution:  # noqa: D101
                 return False
             if l_head.val == t_root.val:
                 return check_pos_match(l_head.next, t_root.left) or check_pos_match(
-                    l_head.next, t_root.right
+                    l_head.next,
+                    t_root.right,
                 )
             return False
 
@@ -66,43 +77,51 @@ class Solution:  # noqa: D101
         )
 
 
+def main() -> None:
+    """Problem Name on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = ListNode(1, ListNode(4, ListNode(2, ListNode(6)))),\
+            TreeNode(\
+                1,\
+                left=TreeNode(4, right=TreeNode(2, left=TreeNode(1))),\
+                right=(\
+                    TreeNode(\
+                        4,\
+                        left=TreeNode(\
+                            2,\
+                            left=TreeNode(6),\
+                            right=TreeNode(8, left=TreeNode(1), right=TreeNode(3)),\
+                        ))))
+        >>> example_case_2 = ListNode(4, ListNode(2, ListNode(8))),\
+            TreeNode(\
+                1,\
+                left=TreeNode(4, right=TreeNode(2, left=TreeNode(1))),\
+                right=(\
+                    TreeNode(\
+                        4,\
+                        left=TreeNode(\
+                            2,\
+                            left=TreeNode(6),\
+                            right=TreeNode(8, left=TreeNode(1), right=TreeNode(3)),\
+                        ))))
+
+    Example 1:
+        >>> sol.isSubPath(*example_case_1)
+        True
+
+    Example 2:
+        >>> sol.isSubPath(*example_case_2)
+        True
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(
-        sol.isSubPath(
-            ListNode(4, ListNode(2, ListNode(8))),
-            TreeNode(
-                1,
-                left=TreeNode(4, right=TreeNode(2, left=TreeNode(1))),
-                right=(
-                    TreeNode(
-                        4,
-                        left=TreeNode(
-                            2,
-                            left=TreeNode(6),
-                            right=TreeNode(8, left=TreeNode(1), right=TreeNode(3)),
-                        ),
-                    )
-                ),
-            ),
-        ),
-    )  # True
-    print(
-        sol.isSubPath(
-            ListNode(1, ListNode(4, ListNode(2, ListNode(6)))),
-            TreeNode(
-                1,
-                left=TreeNode(4, right=TreeNode(2, left=TreeNode(1))),
-                right=(
-                    TreeNode(
-                        4,
-                        left=TreeNode(
-                            2,
-                            left=TreeNode(6),
-                            right=TreeNode(8, left=TreeNode(1), right=TreeNode(3)),
-                        ),
-                    )
-                ),
-            ),
-        )
-    )  # True
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

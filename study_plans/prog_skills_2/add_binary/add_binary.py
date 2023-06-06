@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import zip_longest
 
 
@@ -19,7 +20,8 @@ class Solution:  # noqa: D101
         ret_number = ["0"] * (max(len(a), len(b)) + 1)
         carry = "0"
         for i, (ca, cb) in enumerate(
-            zip_longest(reversed(a), reversed(b), fillvalue="0"), start=1
+            zip_longest(reversed(a), reversed(b), fillvalue="0"),
+            start=1,
         ):
             ones = sum(val == "1" for val in (ca, cb, carry))
             ret_number[-i] = str(ones % 2)
@@ -33,7 +35,29 @@ class Solution:  # noqa: D101
         )
 
 
+def main() -> None:
+    """67. Add Binary on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "11", "1"
+        >>> example_case_2 = "1010", "1011"
+
+    Example 1:
+        >>> sol.addBinary(*example_case_1)
+        '100'
+
+    Example 2:
+        >>> sol.addBinary(*example_case_2)
+        '10101'
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.addBinary("11", "1"))  # 100
-    print(sol.addBinary("1010", "1011"))  # 10101
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

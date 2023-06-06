@@ -27,7 +27,7 @@ class WordDictionary:
     def search(self, pattern: str) -> bool:
         """Return if pattern exists in stored words."""
 
-        def search_node(word: str, curr_trie: dict):
+        def search_node(word: str, curr_trie: dict) -> bool:
             for idx, char in enumerate(word):
                 if char not in curr_trie:
                     return char == "." and any(
@@ -41,7 +41,7 @@ class WordDictionary:
         return search_node(pattern, self.trie)
 
 
-def main():
+def main() -> None:
     """Design Add and Search Words Data Structure on LeetCode.
 
     ====================================================

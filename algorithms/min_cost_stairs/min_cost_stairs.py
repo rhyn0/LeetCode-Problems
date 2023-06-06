@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -23,7 +24,29 @@ class Solution:  # noqa: D101
         return cost[-1]
 
 
+def main() -> None:
+    """746. Min Cost Climbing Stairs on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [10, 15, 20]
+        >>> example_case_2 = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
+
+    Example 1:
+        >>> sol.minCostClimbingStairs(example_case_1)
+        15
+
+    Example 2:
+        >>> sol.minCostClimbingStairs(example_case_2)
+        6
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.minCostClimbingStairs([10, 15, 20]))  # 15
-    print(sol.minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))  # 6
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

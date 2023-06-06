@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 
 
 class NumMatrix:  # noqa: D101
@@ -46,14 +47,31 @@ class NumMatrix:  # noqa: D101
         return self.prefix_sum[bot][right] - above - side + diag
 
 
+def main() -> None:
+    """Sum Region on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> example_matrix_1 = NumMatrix(\
+            [\
+                [3, 0, 1, 4, 2],\
+                [5, 6, 3, 2, 1],\
+                [1, 2, 0, 1, 5],\
+                [4, 1, 0, 1, 7],\
+                [1, 0, 3, 0, 5],\
+            ])
+        >>> example_case_1 = [2, 1, 4, 3]
+
+    Example 1:
+        >>> example_matrix_1.sumRegion(*example_case_1)
+        8
+    """
+
+
 if __name__ == "__main__":
-    mtrx = NumMatrix(
-        [
-            [3, 0, 1, 4, 2],
-            [5, 6, 3, 2, 1],
-            [1, 2, 0, 1, 5],
-            [4, 1, 0, 1, 7],
-            [1, 0, 3, 0, 5],
-        ]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
     )
-    print(mtrx.sumRegion(*[2, 1, 4, 3]))  # 8

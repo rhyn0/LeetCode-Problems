@@ -19,13 +19,13 @@ class Solution:  # noqa: D101
             int: Number of islands in the given grid.
         """
 
-        def is_land(row, col) -> bool:
+        def is_land(row: int, col: int) -> bool:
             try:
                 return row >= 0 and col >= 0 and grid[row][col] == "1"
             except IndexError:
                 return False
 
-        def delete_island(row, col):
+        def delete_island(row: int, col: int) -> None:
             if not is_land(row, col):
                 return
             grid[row][col] = "0"
@@ -44,7 +44,11 @@ class Solution:  # noqa: D101
 
     @classmethod
     def valid_neighbors(
-        cls, row: int, col: int, row_max: int, col_max: int
+        cls,
+        row: int,
+        col: int,
+        row_max: int,
+        col_max: int,
     ) -> Iterator[tuple[int, int]]:
         """Generate valid cardinal neighbors that are in bounds."""
         for delta_r, delta_c in pairwise(cls.DIRECTIONS):
@@ -104,7 +108,7 @@ class UnionFind:
         self.count -= 1
 
 
-def main():
+def main() -> None:
     """Number of Islands on LeetCode.
 
     ====================================================

@@ -37,7 +37,7 @@ class Solution:  # noqa: D101
         return [nums2.index(val) for val in nums1]
 
 
-def main():
+def main() -> None:
     """Find Anagram Mappings on LeetCode.
 
     ====================================================
@@ -78,5 +78,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

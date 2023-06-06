@@ -32,7 +32,7 @@ class MyCalendar:
         return True
 
 
-def main():
+def main() -> None:
     """My Calendar I on LeetCode.
 
     ====================================================

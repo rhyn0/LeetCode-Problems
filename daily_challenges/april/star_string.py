@@ -39,7 +39,7 @@ class Solution:  # noqa: D101
         return "".join(result_str[:j])
 
 
-def main():
+def main() -> None:
     """Removing Stars from a String on LeetCode.
 
     ====================================================
@@ -67,5 +67,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

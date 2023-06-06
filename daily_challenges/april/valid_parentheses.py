@@ -36,7 +36,7 @@ class Solution:  # noqa: D101
         return len(stack) == 0
 
 
-def main():
+def main() -> None:
     """Valid Parentheses on LeetCode.
 
     ====================================================
@@ -65,5 +65,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

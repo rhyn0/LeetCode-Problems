@@ -1,4 +1,5 @@
 # Standard Library
+import doctest
 from itertools import pairwise
 from operator import ge
 from operator import le
@@ -37,9 +38,39 @@ class SolutionLeet:  # noqa: D101
         return incr or decr
 
 
+def main() -> None:
+    """896. Monotonic Array on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = [1, 2, 2, 3]
+        >>> example_case_2 = [6, 5, 4, 4]
+        >>> example_case_3 = [1, 3, 2]
+        >>> test_case_1 = [1]
+
+    Example 1:
+        >>> sol.isMonotonic(example_case_1)
+        True
+
+    Example 2:
+        >>> sol.isMonotonic(example_case_2)
+        True
+
+    Example 3:
+        >>> sol.isMonotonic(example_case_3)
+        False
+
+    Test 1:
+        >>> sol.isMonotonic(test_case_1)
+        True
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.isMonotonic([1, 2, 2, 3]))  # true
-    print(sol.isMonotonic([6, 5, 4, 4]))  # true
-    print(sol.isMonotonic([1, 3, 2]))  # false
-    print(sol.isMonotonic([1]))  # true
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

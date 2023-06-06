@@ -55,7 +55,7 @@ class Solution:  # noqa: D101
         return provisioned_rooms
 
 
-def main():
+def main() -> None:
     """253. Meeting Rooms II on LeetCode.
 
     ====================================================
@@ -90,5 +90,5 @@ if __name__ == "__main__":
     doctest.testmod(
         optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
         | doctest.ELLIPSIS
-        | doctest.NORMALIZE_WHITESPACE
+        | doctest.NORMALIZE_WHITESPACE,
     )

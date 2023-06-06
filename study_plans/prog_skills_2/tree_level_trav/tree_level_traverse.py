@@ -8,8 +8,10 @@ class Node:  # noqa: D101
     __slots__ = "val", "children"
 
     def __init__(  # noqa: D107
-        self, value: int | None = None, children: list[Node] | None = None
-    ):
+        self,
+        value: int | None = None,
+        children: list[Node] | None = None,
+    ) -> None:
         self.val = value
         self.children = children
 
@@ -44,8 +46,8 @@ class Solution:  # noqa: D101
 if __name__ == "__main__":
     sol = Solution()
     sol.levelOrder(
-        Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)])
+        Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)]),
     )  # [[1], [3, 2, 4], [5, 6]]
     sol.levelOrder(
-        Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)])
+        Node(1, [Node(3, [Node(5), Node(6)]), Node(2), Node(4)]),
     )  # [[1], [3, 2, 4], [5, 6]]

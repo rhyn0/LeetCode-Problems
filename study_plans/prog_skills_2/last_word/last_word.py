@@ -1,3 +1,7 @@
+# Standard Library
+import doctest
+
+
 class Solution:  # noqa: D101
     def lengthOfLastWord(self, s: str) -> int:  # spec
         """Return length of last word in a string.
@@ -21,8 +25,34 @@ class Solution:  # noqa: D101
         return curr_len or last
 
 
+def main() -> None:
+    """58. Length of Last Word on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "hello world"
+        >>> example_case_2 = "   fly me   to   the moon  "
+        >>> self_test_1 = "luffy is still joyboy"
+
+    Example 1:
+        >>> sol.lengthOfLastWord(example_case_1)
+        5
+
+    Example 2:
+        >>> sol.lengthOfLastWord(example_case_2)
+        4
+
+    Self Test 1:
+        >>> sol.lengthOfLastWord(self_test_1)
+        6
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.lengthOfLastWord("hello world"))  # 5
-    print(sol.lengthOfLastWord("   fly me   to   the moon  "))  # 4
-    print(sol.lengthOfLastWord("luffy is still joyboy"))  # 6
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )

@@ -1,5 +1,6 @@
 # Standard Library
 from collections import Counter
+import doctest
 
 
 class Solution:  # noqa: D101
@@ -27,7 +28,29 @@ class Solution:  # noqa: D101
         return ret_list
 
 
+def main() -> None:
+    """760. Find Anagram Mappings on LeetCode.
+
+    ====================================================
+
+    Setup:
+        >>> sol = Solution()
+        >>> example_case_1 = "cbaebabacd", "abc"
+        >>> example_case_2 = "abab", "ab"
+
+    Example 1:
+        >>> sol.findAnagrams(*example_case_1)
+        [0, 6]
+
+    Example 2:
+        >>> sol.findAnagrams(*example_case_2)
+        [0, 1, 2]
+    """
+
+
 if __name__ == "__main__":
-    sol = Solution()
-    print(sol.findAnagrams("cbaebabacd", "abc"))  # [0, 6]
-    print(sol.findAnagrams("abab", "ab"))  # [0, 1, 2]
+    doctest.testmod(
+        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST
+        | doctest.ELLIPSIS
+        | doctest.NORMALIZE_WHITESPACE,
+    )
