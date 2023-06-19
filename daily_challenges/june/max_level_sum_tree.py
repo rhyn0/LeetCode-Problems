@@ -80,13 +80,7 @@ class Solution:  # noqa: D101
                 que.append((curr_node.left, level + 1))
         # sort by layer asc, then by value desc
         # guarantees that earlier levels come first when scores match
-        return sorted(
-            layers.items(),
-            key=itemgetter(1),
-            reverse=True,
-        )[
-            0
-        ][0]
+        return sorted(layers.items(), key=itemgetter(1), reverse=True)[0][0]
 
 
 def main() -> None:
