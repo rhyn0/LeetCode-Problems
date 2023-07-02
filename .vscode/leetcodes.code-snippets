@@ -136,5 +136,25 @@
 			"            tree_node_que.append(right)",
 			"    return root_node",
 		]
+	},
+	"LeetCode Float Compare": {
+		"scope": "python",
+		"description": "Function to include when problem returns a float value to compare.",
+		"prefix": "leetfloat",
+		"body": [
+			"from decimal import localcontext",
+			"def float_compare(x: float, y: float) -> bool:",
+			"    ${BLOCK_COMMENT_START}Compare the given floats given constraints of problem.${BLOCK_COMMENT_END}",
+			"    with localcontext() as ctx:",
+			"        # Problem says, correct if they are within 10^-5 of the correct answer",
+			"        ctx.prec = 5",
+			"        return (",
+			"            ctx.compare(",
+			"                ctx.create_decimal_from_float(x),",
+			"                ctx.create_decimal_from_float(y),",
+			"            )",
+			"            == 0",
+			"        )",
+		]
 	}
 }

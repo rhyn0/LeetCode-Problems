@@ -1,0 +1,6 @@
+component: Daily
+kind: Added
+body: |-
+  373. Find K Pairs with Smallest Sums
+  Had a TLE bug on LeetCode with the Editorial Solution, so something weird
+time: 2023-07-01T14:21:56.671064-07:00
