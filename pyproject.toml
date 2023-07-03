@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "RO-LeetCode"
-version = "0.12.0"
+version = "0.13.0"
 description = "Various LeetCode exercises done"
 authors = ["Ryan Ozawa <ryan.ozawa21@gmail.com>"]
 license = "MIT"
@@ -8,7 +8,7 @@ readme = "README.md"
 
 [project]
 name = "RO-LeetCode"
-version = "0.12.0"
+version = "0.13.0"
 description = "Various LeetCode exercises done"
 authors = [{ name = "Ryan Ozawa", email = "ryan.ozawa21@gmail.com" }]
 license = { text = "MIT" }
