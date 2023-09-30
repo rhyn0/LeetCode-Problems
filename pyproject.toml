@@ -131,6 +131,7 @@ format = "text"
 max-complexity = 10
 
 [tool.ruff.per-file-ignores]
+"**/__init__.py" = ["D104"] # ignore missing docstring in __init__.py files
 
 [tool.ruff.pydocstyle]
 convention = "google"
