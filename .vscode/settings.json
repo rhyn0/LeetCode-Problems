@@ -1,5 +1,9 @@
 {
-    "ruff.args": [
+    "ruff.lint.args": [
+        "--config",
+        "pyproject.toml"
+    ],
+    "ruff.format.args": [
         "--config",
         "pyproject.toml"
     ],
@@ -8,9 +12,10 @@
         "gitlens.codeLens.symbolScopes": [
             "!Module"
         ],
-        "editor.formatOnType": true,
+        "editor.formatOnType": false,
         "editor.wordBasedSuggestions": false,
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
-    }
+    },
+    "editor.formatOnSave": true
 }
