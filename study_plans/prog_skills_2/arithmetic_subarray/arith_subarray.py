@@ -30,7 +30,7 @@ class Solution:  # noqa: D101
                 key=lambda x: x[1] - x[0],
             )
             ret_list.append(
-                next(groups) and next(groups, False) is False,  # noqa: FBT003
+                next(groups) and next(groups, False) is False,
             )
         return ret_list
 

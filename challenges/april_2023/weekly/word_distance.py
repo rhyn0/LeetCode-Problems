@@ -59,7 +59,7 @@ class Solution:  # noqa: D101
         minima = float("inf")
 
         def min_compare() -> int | float:
-            if word1_idx == -1 or word2_idx == -1 or word1_idx == word2_idx:
+            if word1_idx in {word2_idx, -1} or word2_idx == -1:
                 return minima
             return min(minima, abs(word1_idx - word2_idx))
 

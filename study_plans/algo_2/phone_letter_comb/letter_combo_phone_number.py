@@ -1,9 +1,10 @@
 # Standard Library
 import doctest
+from typing import Final
 
 
 class Solution:  # noqa: D101
-    NUMBER_LETTERS = {
+    NUMBER_LETTERS: Final = {
         "2": "abc",
         "3": "def",
         "4": "ghi",

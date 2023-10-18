@@ -33,8 +33,7 @@ class Solution:  # noqa: D101
                 profit = recurse_stocks(day + 1, has_stock=False) + prices[day] - fee
             else:
                 profit = recurse_stocks(day + 1, has_stock=True) - prices[day]
-            profit = max(profit, recurse_stocks(day + 1, has_stock=has_stock))
-            return profit
+            return max(profit, recurse_stocks(day + 1, has_stock=has_stock))
 
         return recurse_stocks(0, has_stock=False)
 

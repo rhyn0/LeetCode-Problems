@@ -2,10 +2,11 @@
 from collections import deque
 from collections.abc import Iterator
 import doctest
+from typing import Final
 
 
 class Solution:  # noqa: D101
-    DIRECTIONS = [
+    DIRECTIONS: Final = [
         (-1, -1),
         (-1, 0),
         (-1, 1),

@@ -28,7 +28,7 @@ class Node:  # noqa: D101
             return NotImplemented
         return self.val < other.val
 
-    def __eq__(self, other: Any) -> bool:
+    def __eq__(self, other: object) -> bool:
         """Make comparisons easy for testing."""
         if not isinstance(other, Node):
             return NotImplemented

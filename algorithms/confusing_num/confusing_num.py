@@ -1,11 +1,12 @@
 # Standard Library
 import doctest
+from typing import ClassVar
 
 
 class Solution:  # noqa: D101
     # numbers and what they rotate to be
-    ROTATIONS = {0: 0, 1: 1, 6: 9, 8: 8, 9: 6}
-    STR_ROTATIONS = {str(k): str(val) for k, val in ROTATIONS.items()}
+    ROTATIONS: ClassVar = {0: 0, 1: 1, 6: 9, 8: 8, 9: 6}
+    STR_ROTATIONS: ClassVar = {str(k): str(val) for k, val in ROTATIONS.items()}
 
     def confusingNumber(self, num: int) -> bool:  # spec
         """Reverse and then rotate the string digit by digit.
