@@ -84,12 +84,12 @@
 			"            [${1}, ${0:...}],\\",
 			"            [[],],\\",
 			"            )",
-			"$BLOCK_COMMENT_END",
+			"    $BLOCK_COMMENT_END",
 			"\n\nif __name__ == \"__main__\":",
 			"    doctest.testmod(",
 			"        optionflags=doctest.REPORTING_FLAGS ^ doctest.FAIL_FAST",
 			"        | doctest.ELLIPSIS",
-			"        | doctest.NORMALIZE_WHITESPACE",
+			"        | doctest.NORMALIZE_WHITESPACE,",
 			"    )"
 		]
 	},
