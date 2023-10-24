@@ -82,6 +82,7 @@ ignore = [
     "ANN101", # don't need typo hint for self in instance method
     "ANN102", # don't need type hint for cls in classmethod
     "ANN401", # allow the use of typing.Any
+    "EM101",  # don't use string literal as variable argument to errors
 ]
 
 # Allow autofix for listed rules.
