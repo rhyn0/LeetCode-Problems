@@ -60,7 +60,7 @@
 	},
 	"LeetCode Design Problem": {
 		"scope": "python",
-		"prefix": "designleet",
+		"prefix": "leetdesign",
 		"description": "Layout the basics for creating necessary class for a LeetCode Design Problem",
 		"body": [
 			"import doctest",
@@ -68,10 +68,14 @@
 			"class ${1}:",
 			"    def __init__(self, ${2:Arguments}):  # noqa: D107",
 			"        ...\n\n",
-			"def test_design_inputs(func_calls: list[str], inputs: list[list[Any]]) -> list[Any]:",
+			"def test_design_inputs(",
+			"    cls: type,"
+			"    func_calls: list[str],"
+			"    inputs: list[list[Any]],"
+			") -> list[Any]:",
 			"    ${BLOCK_COMMENT_START}Call input functions with associated inputs and return their output as list.${BLOCK_COMMENT_END}",
 			"    # first index is always an initialization",
-			"    sol = ${1:Solution}()",
+			"    sol = cls(*inputs[0])",
 			"    return [None] + [",
 			"        sol.__getattribute__(func)(*args)",
 			"        for func, args in zip(func_calls[1:], inputs[1:], strict=True)",
@@ -80,7 +84,7 @@
 			"    $BLOCK_COMMENT_START${3:Problem Name} on LeetCode.\n",
 			"    ====================================================\n",
 			"    Test Methods:",
-			"        >>> test_design_inputs(\\",
+			"        >>> test_design_inputs(${1:Solution}\\",
 			"            [${1}, ${0:...}],\\",
 			"            [[],],\\",
 			"            )",
