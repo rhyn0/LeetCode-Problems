@@ -20,7 +20,7 @@
 		"prefix": "leetclass",
 		"description": "Template for filling in the LeetCode solution class in Python",
 		"body": [
-			"$BLOCK_COMMENT_START${6}$BLOCK_COMMENT_END",
+			"${BLOCK_COMMENT_START}Daily Challenge for ${6:Date} on LeetCode: Problem #${3} [${7:Difficulty}].${BLOCK_COMMENT_END}",
 			"import doctest",
 			"class Solution:  # noqa: D101",
 			"    def ${1: func}(${2:ARGS}):\n        ${0:...}",
