@@ -17,5 +17,8 @@
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "'Monaspace Xenon', Menlo, Monaco, 'Courier New', monospace",
+    "errorLens.fontFamily": "'Monaspace Argon', monospace",
+    "editor.inlayHints.fontFamily": "'Monaspace Krypton', monospace",
 }
