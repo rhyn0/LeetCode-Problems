@@ -1,4 +1,5 @@
 """Essentials of Dynamic Programming LIS Problem on LeetCode."""
+
 # Standard Library
 import doctest
 

@@ -1,4 +1,6 @@
 """Daily Challenge for April 20, 2023."""
+
+# Standard Library
 import doctest
 from typing import Final
 
@@ -8,7 +10,11 @@ class Solution:  # noqa: D101
     MODULO: Final = 10**9 + 7
 
     def profitableSchemes(
-        self, n: int, min_profit: int, group: list[int], profit: list[int],
+        self,
+        n: int,
+        min_profit: int,
+        group: list[int],
+        profit: list[int],
     ) -> int:
         """Return the number of profitable schemes that will produce at least minProfit.
 
@@ -45,12 +51,6 @@ class Solution:  # noqa: D101
                     dp[left_most_job][in_use_workers][profit_point] = take % self.MODULO
 
         return dp[0][0][0]
-
-    def profitableSchemesMemo(
-        self, n: int, min_profit: int, group: list[int], profit: list[int],
-    ) -> int:
-        def recurse_scenario(curr_job: int, curr_workers: int, curr_profit: int) -> int:
-            ...
 
 
 def main():

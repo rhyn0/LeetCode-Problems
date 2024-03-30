@@ -1,0 +1,31 @@
+{
+    "ruff.path": [
+        // issue with how the extension is handling the path, have to use the full path to the virtualenv
+        "/home/rhyn0/.cache/pypoetry/virtualenvs/ro-leetcode-7P0LFGbS-py3.10/bin/ruff"
+    ],
+    "ruff.enable": true,
+    "ruff.lint.enable": true,
+    "ruff.lint.args": [
+        "--config=./pyproject.toml"
+    ],
+    "ruff.importStrategy": "fromEnvironment",
+    "black-formatter.importStrategy": "fromEnvironment",
+    "black-formatter.path": [
+        "/usr/bin/env",
+        "-u",
+        "PYTHONPATH",
+        "poetry",
+        "run",
+        "black"
+    ],
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "python.testing.pytestEnabled": true,
+}

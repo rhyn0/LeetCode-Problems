@@ -1,4 +1,5 @@
 """Essentials of Dynamic Programming State Machine Problem on LeetCode."""
+
 # Standard Library
 import doctest
 

@@ -1,4 +1,5 @@
 """Daily Challenge for June 8, 2023 on LeetCode."""
+
 # Standard Library
 from bisect import bisect_right
 import doctest

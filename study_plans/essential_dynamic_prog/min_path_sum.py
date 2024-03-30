@@ -1,4 +1,5 @@
 """Intro Problem to Matrix Pattern for Essentials of Dynamic Programming Study Plan."""
+
 # Standard Library
 import doctest
 from itertools import accumulate

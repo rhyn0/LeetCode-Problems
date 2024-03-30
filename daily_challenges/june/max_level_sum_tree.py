@@ -1,4 +1,5 @@
 """Daily Change for June 15, 2023 on LeetCode."""
+
 from __future__ import annotations
 
 # Standard Library
@@ -91,7 +92,7 @@ def main() -> None:
     Setup:
         >>> sol = Solution()
         >>> example_case_1 = [1,7,0,7,-8,None,None]
-        >>> example_case_1 = [989,None,10250,98693,-89388,None,None,None,-32127]
+        >>> example_case_2 = [989,None,10250,98693,-89388,None,None,None,-32127]
 
     Example 1:
         >>> sol.maxLevelSum(build_tree(example_case_1))

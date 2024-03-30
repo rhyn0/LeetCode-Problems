@@ -1,4 +1,5 @@
 """Daily Challenge for April 2, 2023."""
+
 # Standard Library
 import bisect
 import doctest
@@ -61,15 +62,17 @@ class Solution:  # noqa: D101
         num_potions = len(potions)
         potions.sort()
         return [
-            (num_potions - insert_idx)
-            if (
-                insert_idx := bisect.bisect_left(
-                    potions,
-                    ceil(success / spell_strength),
+            (
+                (num_potions - insert_idx)
+                if (
+                    insert_idx := bisect.bisect_left(
+                        potions,
+                        ceil(success / spell_strength),
+                    )
                 )
+                != -1
+                else 0
             )
-            != -1
-            else 0
             for spell_strength in spells
         ]
 

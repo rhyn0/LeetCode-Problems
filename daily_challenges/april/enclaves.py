@@ -1,4 +1,5 @@
 """LeetCode Daily Challenge for April 7, 2023."""
+
 # Standard Library
 from collections import deque
 from collections.abc import Iterator

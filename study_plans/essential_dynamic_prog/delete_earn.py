@@ -1,4 +1,5 @@
 """Study Problem from Essential Dynamic Programming Plan."""
+
 # Standard Library
 import doctest
 from functools import cache

@@ -68,7 +68,7 @@ class Solution:  # noqa: D101
                     continue
                 for new_i, new_j in self.valid_neighbors(i_row, j_col, rows, cols):
                     if grid[new_i][new_j] == "1":
-                        uf.union(i_row * rows + j_col, (new_i) * rows + (new_j))
+                        uf.union(i_row * cols + j_col, (new_i) * cols + (new_j))
         return uf.count
 
 
@@ -83,7 +83,7 @@ class UnionFind:
         for i, row in enumerate(grid):
             for j_col, cell_val in enumerate(row):
                 if cell_val == "1":
-                    self.parents[i * rows + j_col] = i * rows + j_col
+                    self.parents[i * cols + j_col] = i * cols + j_col
                     _count += 1
         self.count = _count
 
@@ -114,6 +114,7 @@ def main() -> None:
     ====================================================
 
     Setup:
+        >>> from copy import deepcopy
         >>> sol = Solution()
         >>> test_case_1 = [["1","1","1","1","0"],["1","1","0","1","0"],\
             ["1","1","0","0","0"],["0","0","0","0","0"]]
@@ -121,18 +122,14 @@ def main() -> None:
             ["0","0","1","0","0"],["0","0","0","1","1"]]
 
     Example 1:
-        >>> sol.numIslands(test_case_1)
+        >>> sol.numIslands(deepcopy(test_case_1))
         1
-
-    Example 2:
-        >>> sol.numIslands(test_case_2)
-        3
-
-    Example 1:
         >>> sol.numIslandsUF(test_case_1)
         1
 
     Example 2:
+        >>> sol.numIslands(deepcopy(test_case_2))
+        3
         >>> sol.numIslandsUF(test_case_2)
         3
     """

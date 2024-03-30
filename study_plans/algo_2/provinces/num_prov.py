@@ -2,6 +2,7 @@
 
 Previously did problem for a study plan.
 """
+
 # Standard Library
 from collections import deque
 import doctest

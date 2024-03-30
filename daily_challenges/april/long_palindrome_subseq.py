@@ -1,4 +1,5 @@
 """Daily Challenge from April 14, 2023."""
+
 # Standard Library
 import doctest
 

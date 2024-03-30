@@ -10,7 +10,7 @@ class Solution:  # noqa: D101
 
         Also the number must be made up of the same digits as num.
 
-        !!! The below does not get the correct answer. !!!
+        # ! The below does not get the correct answer always.
 
         Args:
             num (int): Number to find greater number for.
@@ -77,7 +77,7 @@ def main() -> None:
 
     Example 1:
         >>> sol.nextGreaterElement(example_case_1)
-        12
+        21
 
     Example 2:
         >>> sol.nextGreaterElement(example_case_2)

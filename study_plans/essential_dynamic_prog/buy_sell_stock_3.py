@@ -1,6 +1,6 @@
-""""""
+# Standard Library
 import doctest
-from operator import add, itemgetter
+from operator import add
 
 
 class Solution:  # noqa: D101
@@ -22,7 +22,7 @@ class Solution:  # noqa: D101
 
         left_buy, right_sell = prices[0], prices[-1]
         split1_profits, split2_profits = [0] * n, [0] * (n + 1)
-        for left, right in zip(range(1, n), range(n - 2, -1, -1)):
+        for left, right in zip(range(1, n), range(n - 2, -1, -1), strict=False):
             split1_profits[left] = max(
                 split1_profits[left - 1], prices[left] - left_buy
             )
@@ -33,7 +33,9 @@ class Solution:  # noqa: D101
             left_buy = min(left_buy, prices[left])
             right_sell = max(right_sell, prices[right])
 
-        return max(add(*item) for item in zip(split1_profits, split2_profits[1:]))
+        return max(
+            add(*item) for item in zip(split1_profits, split2_profits[1:], strict=False)
+        )
 
     def maxProfitFSM(self, prices: list[int]) -> int:
         """Return same as above using FSM logic with no extra space."""

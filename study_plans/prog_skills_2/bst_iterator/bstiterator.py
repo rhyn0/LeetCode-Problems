@@ -45,7 +45,7 @@ class BSTIterator:
         """
         return self._next is not None
 
-    def next(self) -> int | None:  # noqa: A003
+    def next(self) -> int | None:
         """Return next value in tree for in-order.
 
         Can return None if finished the tree.

@@ -1,4 +1,5 @@
 """Daily Challenge for June 18, 2023 on LeetCode."""
+
 # Standard Library
 import doctest
 from itertools import pairwise

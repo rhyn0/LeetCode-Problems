@@ -1,4 +1,5 @@
 """Practice for Matrix Pattern of Dynamic Programming Essentials."""
+
 # Standard Library
 import doctest
 
@@ -21,9 +22,11 @@ class Solution:  # noqa: D101
             curr_row = [0]
             for idx, val in enumerate(row, start=1):
                 curr_row.append(
-                    (min(prev_row[idx], curr_row[-1], prev_row[idx - 1]) + 1)
-                    if val == "1"
-                    else 0,
+                    (
+                        (min(prev_row[idx], curr_row[-1], prev_row[idx - 1]) + 1)
+                        if val == "1"
+                        else 0
+                    ),
                 )
                 max_area = max(max_area, curr_row[-1])
             prev_row = curr_row

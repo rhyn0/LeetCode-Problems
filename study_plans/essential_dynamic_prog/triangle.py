@@ -1,4 +1,5 @@
 """Practice for Matrix Pattern for Essentials of Dynamic Programming Study Plan."""
+
 # Standard Library
 import doctest
 from typing import Final

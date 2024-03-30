@@ -1,4 +1,5 @@
 """Daily Challenge for June 28, 2023 on LeetCode."""
+
 # Standard Library
 from collections import defaultdict
 from decimal import Decimal

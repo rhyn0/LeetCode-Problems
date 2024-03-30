@@ -60,7 +60,6 @@ def main() -> None:
         ListNode(1, ListNode(4, ListNode(2, ListNode(3, None))))
 
     """
-    ...
 
 
 if __name__ == "__main__":
