@@ -19,6 +19,19 @@ I use various linters and formatters. Currently on the repository via [pre-commi
 - [Black](https://black.readthedocs.io/en/stable/)
 - [Ruff](https://astral.sh/ruff)
 
+### Testing
+
+The entire repository works with [pytest](https://docs.pytest.org/). The following are some helpful commands for running tests.
+
+```bash
+# test every file
+pytest
+# test every file, but fail quickly
+pytest -x
+# test files of a certain pattern
+pytest -k <PATTERN>
+```
+
 
 ## Changelog
 
