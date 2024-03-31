@@ -1,0 +1,7 @@
+component: Study
+kind: Added
+body: |-
+  Completed 96. Unique Binary Search Trees
+
+  Simple DP approach scored 90% on runtime and 90% on memory
+time: 2024-03-30T18:35:24.659170252-07:00

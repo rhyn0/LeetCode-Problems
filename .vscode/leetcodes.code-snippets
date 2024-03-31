@@ -20,7 +20,7 @@
 		"prefix": "leetclass",
 		"description": "Template for filling in the LeetCode solution class in Python",
 		"body": [
-			"$BLOCK_COMMENT_START${6}",
+			"$BLOCK_COMMENT_START${6:Problem is From}",
 			"\n${3:Problem Name} on LeetCode.\n",
 			"====================================================\n",
 			"Setup:",
