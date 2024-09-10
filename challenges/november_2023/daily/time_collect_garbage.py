@@ -1,4 +1,5 @@
 """Daily Challenge for November 20 on LeetCode: Problem #2391 [Medium]."""
+
 # Standard Library
 from collections import Counter
 import doctest

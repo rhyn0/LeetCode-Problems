@@ -1,4 +1,5 @@
 """Daily Challenge for June 22, 2023 on LeetCode."""
+
 # Standard Library
 import doctest
 from functools import cache

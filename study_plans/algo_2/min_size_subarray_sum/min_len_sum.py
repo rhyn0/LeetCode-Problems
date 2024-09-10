@@ -43,23 +43,6 @@ def main() -> None:
     Example 3:
         >>> sol.minSubArrayLen(11, [1,1,1,1,1,1,1,1])
         0
-
-    Binary Search
-    Example 1:
-        >>> sol.minSubArrayLenBin(7, [2,3,1,2,4,3])
-        2
-
-    Example 2:
-        >>> sol.minSubArrayLenBin(4, [1, 4, 4])
-        1
-
-    Example 3:
-        >>> sol.minSubArrayLenBin(11, [1,1,1,1,1,1,1,1])
-        0
-
-    Test 1:
-        >>> sol.minSubArrayLenBin(15, [1, 2, 3, 4, 5])
-        5
     """
 
 

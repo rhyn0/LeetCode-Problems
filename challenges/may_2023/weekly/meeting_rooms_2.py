@@ -1,4 +1,5 @@
 """Weekly Challenge on LeetCode for May 2023."""
+
 # Standard Library
 import doctest
 import heapq

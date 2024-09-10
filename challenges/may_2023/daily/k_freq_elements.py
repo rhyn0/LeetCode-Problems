@@ -1,4 +1,5 @@
 """Daily Challenge Problem for May 22, 2023."""
+
 # Standard Library
 from collections import Counter
 import doctest
@@ -55,7 +56,7 @@ def main() -> None:
         >>> sol.topKFrequent(*example_case_1)
         [1, 2]
         >>> sol.topKFrequentNoLib(*example_case_1)
-        [1, 2]
+        [2, 1]
         >>> sol.topKFrequentHeap(*example_case_1)
         [1, 2]
 

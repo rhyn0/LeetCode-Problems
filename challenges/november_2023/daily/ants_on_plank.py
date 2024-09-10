@@ -1,4 +1,5 @@
 """Daily Challenge for November 4 on LeetCode: Problem #1503 [Medium]."""
+
 # Standard Library
 import doctest
 

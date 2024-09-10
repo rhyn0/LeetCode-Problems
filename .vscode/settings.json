@@ -1,24 +1,29 @@
 {
-    "ruff.lint.args": [
-        "--config",
-        "pyproject.toml"
+    "ruff.enable": true,
+    "ruff.lint.enable": true,
+    "ruff.path": [
+        "/Users/ryanozawa/Library/Caches/pypoetry/virtualenvs/ro-leetcode-aeDAkKSw-py3.10/bin/ruff"
     ],
-    "ruff.format.args": [
-        "--config",
-        "pyproject.toml"
+    "ruff.configuration": "./pyproject.toml",
+    "ruff.importStrategy": "fromEnvironment",
+    "ruff.nativeServer": "on",
+    "black-formatter.importStrategy": "fromEnvironment",
+    "black-formatter.path": [
+        "/usr/bin/env",
+        "-u",
+        "PYTHONPATH",
+        "poetry",
+        "run",
+        "black"
     ],
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
         "gitlens.codeLens.symbolScopes": [
             "!Module"
         ],
-        "editor.formatOnType": false,
+        "editor.formatOnType": true,
         "editor.wordBasedSuggestions": "off",
         "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
     },
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "'Monaspace Xenon', Menlo, Monaco, 'Courier New', monospace",
-    "errorLens.fontFamily": "'Monaspace Argon', monospace",
-    "editor.inlayHints.fontFamily": "'Monaspace Krypton', monospace",
+    "python.testing.pytestEnabled": true,
 }

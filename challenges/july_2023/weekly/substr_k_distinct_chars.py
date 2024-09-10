@@ -1,4 +1,5 @@
 """Weekly Challenge for 2nd Week of July, 2023 on LeetCode."""
+
 # Standard Library
 from collections import Counter
 import doctest

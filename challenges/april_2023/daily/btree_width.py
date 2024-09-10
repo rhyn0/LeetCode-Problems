@@ -1,4 +1,5 @@
 """Daily Challenge from April 19, 2023."""
+
 from __future__ import annotations
 
 # Standard Library

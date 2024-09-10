@@ -1,4 +1,5 @@
 """Daily Challenge for April 25, 2023."""
+
 # Standard Library
 import doctest
 import heapq

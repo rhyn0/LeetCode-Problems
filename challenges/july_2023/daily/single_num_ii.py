@@ -1,4 +1,5 @@
 """Daily Challenge for July 4, 2023 on LeetCode."""
+
 # Standard Library
 import doctest
 

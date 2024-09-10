@@ -1,4 +1,5 @@
 """Daily Challenge for November 18 on LeetCode: Problem #1838 [Medium]."""
+
 # Standard Library
 import doctest
 from itertools import accumulate

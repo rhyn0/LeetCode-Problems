@@ -3,6 +3,7 @@
 This problem has been solved before in this repository.
 Check out that prior solve at: ../../../study_plans/leet_75/bus_routes.py
 """
+
 # Standard Library
 from collections import defaultdict
 from collections import deque

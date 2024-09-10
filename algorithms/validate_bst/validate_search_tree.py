@@ -1,4 +1,5 @@
 """Problem 98. Validate Binary Search Tree on LeetCode."""
+
 # Standard Library
 import doctest
 import math
@@ -103,7 +104,8 @@ class Solution:  # noqa: D101
     def isValidBSTTraverse(self, root: TreeNode | None) -> bool:
         """Return same as above without using range bounds as extra space."""
         # store a stack of the nodes we passed but didn't check
-        stack, prev = [], -math.inf
+        stack: list[TreeNode] = []
+        prev = -math.inf
         while stack or root:
             # traverse left subtree
             while root:
@@ -111,11 +113,11 @@ class Solution:  # noqa: D101
                 root = root.left
             # check current node
             root = stack.pop()
-            if root.val <= prev:  # type: ignore
+            if root.val <= prev:
                 return False
-            prev = root.val  # type: ignore
+            prev = root.val
             # traverse right subtree
-            root = root.right  # type: ignore
+            root = root.right
         return True
 
 

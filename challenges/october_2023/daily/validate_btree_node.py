@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 17: Problem #1361 [Medium]."""
+
 # Standard Library
 from collections import deque
 import doctest

@@ -1,4 +1,5 @@
 """Weekly Challenge on LeetCode: Problem #346 [Easy]."""
+
 # Standard Library
 from collections import deque
 import doctest
@@ -19,7 +20,7 @@ class MovingAverage:
         self.lru: deque[int] = deque()
         self.total = 0
 
-    def next(self, val: int) -> float:  # noqa: A003
+    def next(self, val: int) -> float:
         """Add a new integer from stream and output current average."""
         self.total += val
         self.lru.append(val)
@@ -41,7 +42,7 @@ class MovingAverageCircular:
         self.size = size
         self.queue = [0] * self.size
 
-    def next(self, val: int) -> float:  # noqa: A003, D102
+    def next(self, val: int) -> float:  # noqa: D102
         self.count += 1
         # find the tail point, which we willl overwrite
         tail = (self.head + 1) % self.size

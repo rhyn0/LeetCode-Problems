@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 18: Problem #2050 [Hard]."""
+
 # Standard Library
 from collections import defaultdict
 from collections import deque

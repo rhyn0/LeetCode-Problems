@@ -2,6 +2,7 @@
 
 Doing after the day.
 """
+
 # Standard Library
 from collections import deque
 import doctest

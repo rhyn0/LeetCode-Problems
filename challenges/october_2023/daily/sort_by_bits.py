@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 30: Problem #1356 [Easy]."""
+
 # Standard Library
 from bisect import bisect_right
 from collections import Counter

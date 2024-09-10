@@ -1,4 +1,5 @@
 """Weekly Challenge on LeetCode: Problem #1057 [Medium]."""
+
 # Standard Library
 from collections import defaultdict
 import doctest

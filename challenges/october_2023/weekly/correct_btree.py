@@ -108,14 +108,15 @@ class Solution:  # noqa: D101
             if node.right:
                 que.append((node.right, node))
         if linked_node is None:
-            raise ValueError("No offending node found.")  # noqa: TRY003
+            msg = "No offending node found."
+            raise ValueError(msg)
 
         offending_node, _ = seen_nodes[linked_node]
-        parent_node, is_left = seen_nodes[offending_node.val]
+        parent_node, is_left = seen_nodes[offending_node.val]  # type: ignore[union-attr]
         if is_left:
-            parent_node.left = None
+            parent_node.left = None  # type: ignore[union-attr]
         else:
-            parent_node.right = None
+            parent_node.right = None  # type: ignore[union-attr]
         return root
 
     def correctBinaryTreeLevelImprov(self, root: TreeNode) -> TreeNode:
@@ -141,7 +142,8 @@ class Solution:  # noqa: D101
                     queue.append((node.left, node))
 
         # this is an error state
-        raise ValueError("No offending node found.")  # noqa: TRY003
+        msg = "No offending node found."
+        raise ValueError(msg)
 
     def correctBinaryTreeDFS(self, root: TreeNode) -> TreeNode:
         """Return same as above using DFS."""
@@ -162,7 +164,8 @@ class Solution:  # noqa: D101
 
         new_root = build_correct_tree(root)
         if new_root is None:
-            raise ValueError("No offending node found.")  # noqa: TRY003
+            msg = "No offending node found."
+            raise ValueError(msg)
 
         return new_root
 

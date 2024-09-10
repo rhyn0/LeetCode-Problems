@@ -17,7 +17,7 @@ class Solution:  # noqa: D101
         """
 
         def re_match(s_char: str, p_char: str) -> bool:
-            return p_char in (".", s_char)
+            return p_char in {".", s_char}
 
         s_pos, s_len = 0, len(in_str)
         p_pos, p_len = 0, len(pattern)

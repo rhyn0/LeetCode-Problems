@@ -1,4 +1,5 @@
 """Construct a binary search tree from a preorder traversal of the same tree."""
+
 from __future__ import annotations
 
 # Standard Library

@@ -1,4 +1,5 @@
 """Weekly Challenge for Week 5 of June 2023 on LeetCode."""
+
 from __future__ import annotations
 
 # Standard Library

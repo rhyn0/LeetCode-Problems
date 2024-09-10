@@ -1,4 +1,5 @@
 """Daily Challenge for April 15, 2023."""
+
 # Standard Library
 import doctest
 from functools import cache

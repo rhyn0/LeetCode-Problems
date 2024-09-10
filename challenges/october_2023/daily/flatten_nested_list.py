@@ -29,7 +29,7 @@ class NestedIteratorABC(ABC):
     """ABC to allow for simple interface design."""
 
     @abstractmethod
-    def next(self) -> int:  # noqa: A003
+    def next(self) -> int:
         """Return the next integer value of the iterator."""
 
     @abstractmethod
@@ -53,7 +53,7 @@ class NestedIterator(NestedIteratorABC):  # noqa: D101
                 res.extend(self._flatten(val.getList()))
         return res
 
-    def next(self) -> int:  # noqa: A003, D102
+    def next(self) -> int:  # noqa: D102
         item = self.data[self._curr_idx]
         self._curr_idx += 1
         self._hasNext = self._curr_idx < len(self.data)
@@ -77,7 +77,7 @@ class NestedIteratorGen(NestedIteratorABC):  # noqa: D101
             else:
                 yield from self._int_generator(val.getList())
 
-    def next(self) -> int | None:  # noqa: A003
+    def next(self) -> int | None:
         """Return the next integer value of the iterator."""
         # call hasNext to prep the peeked value
         if not self.hasNext():

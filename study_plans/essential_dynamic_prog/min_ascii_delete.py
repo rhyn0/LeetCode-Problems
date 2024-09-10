@@ -1,4 +1,5 @@
 """Practice Problem from Essential Dynamic Programming Plan."""
+
 # Standard Library
 import doctest
 
@@ -51,7 +52,7 @@ class Solution:  # noqa: D101
         prev_dp = [0]
         for idx in range(m - 1, -1, -1):
             prev_dp.append(ord(s2[idx]) + prev_dp[m - idx - 1])
-        prev_dp = list(reversed(prev_dp))
+        prev_dp = list(reversed(prev_dp))  # noqa: FURB187
 
         dp = prev_dp[:]
         for i in range(n - 1, -1, -1):

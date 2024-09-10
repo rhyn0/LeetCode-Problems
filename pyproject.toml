@@ -5,10 +5,11 @@ description = "Various LeetCode exercises done"
 authors = ["Ryan Ozawa <ryan.ozawa21@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [project]
 name = "RO-LeetCode"
-version = "0.13.1"
+version = "0.19.0"
 description = "Various LeetCode exercises done"
 authors = [{ name = "Ryan Ozawa", email = "ryan.ozawa21@gmail.com" }]
 license = { text = "MIT" }
@@ -21,76 +22,19 @@ python = "^3.10"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.2.1"
-ruff = "^0.0.259"
-black = "^23.1.0"
+pre-commit = "^3.7.0"
+ruff = "^0.5.6"
+black = "^24.3.0"
 
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.2.2"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
-select = [
-    "F",   # pyflakes
-    "E",   # pycodestyle
-    "W",   # pycodestyle warnings
-    "C90", # Mccabe complexity
-    # "I",   # isort
-    "N",   # pep8-naming
-    "D",   # pydocstyle
-    "UP",  # pyupgrade
-    "YTT", # flake8-2020
-    "ANN", # flake8-annotations
-    "S",   # flake8-bandit
-    "BLE", # flkae8-blind-except
-    "FBT", # flake8-boolean-trap
-    "B",   # flake8-bugbear
-    "A",   # flake8-builtins
-    "COM", # flake8-commas
-    "C4",  # flake8-comprehensions
-    "DTZ", # flake8-datetimez
-    "EM",  # flake8-errmsg
-    "FA",  # flake8-future-annotations
-    "ISC", # flake8-implicit-str-concat
-    "ICN", # flake8-import-conventions
-    "G",   # flake8-logging
-    "INP", # flake8-no-pep420
-    "PIE", # flake8-pie
-    "T20", # flake8-print
-    "PYI", # flake8-pyi
-    "PT",  # flake8-pytest-style
-    "RSE", # flake8-raise
-    "RET", # flake8-return
-    "SLF", # flake8-self
-    "SIM", # flake8-simplify
-    "TCH", # flake8-type-checking
-    "INT", # flake8-gettext
-    "ARG", # flake8-unused-arguments
-    "PTH", # flake8-use-pathlib
-    "TD",  # flake8-todos
-    "PD",  # pandas vet
-    "PL",  # pylint:
-    "TRY", # tryceratops,
-    "FLY", # flynt
-    "RUF", # ruff rules
-]
-ignore = [
-    "D100",
-    "TCH003", # place imports in type checking block
-    "N802",   # LeetCode problems usually have camel case functions
-    "ANN101", # don't need typo hint for self in instance method
-    "ANN102", # don't need type hint for cls in classmethod
-    "ANN401", # allow the use of typing.Any
-    "EM101",  # don't use string literal as variable argument to errors
-]
-
-# Allow autofix for listed rules.
-fix = true
-show-fixes = true
-fixable = ["ALL"]
-unfixable = []
-
 # Exclude a variety of commonly ignored directories.
 exclude = [
     ".bzr",
@@ -114,27 +58,48 @@ exclude = [
     "node_modules",
     "venv",
 ]
-
+# Enable autofix for rules that support it.
+fix = true
+# Indent width for long-line violations
+indent-width = 4
 # Same as Black.
 line-length = 88
 
+output-format = "concise"
+
+required-version = ">=0.5.5"
+# Show fixes in the output.
+show-fixes = true
+target-version = "py310"
+
+[tool.ruff.format]
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# all rules are fixable
+fixable = ["ALL"]
+unfixable = []
+ignore = [
+    "D100",   # Missing docstring in public module
+    "TCH003", # Type checking block
+    "N802",   # function name should be lowercase, leetCode usually gives camelCase
+    "ANN",    # flake8-annotations, https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
+    "ERA001", # commented out code
+    "I001",   # isort, we use actual isort
+]
+select = ["ALL"]
 
-# Assume Python 3.11.
-target-version = "py311"
 
-# Error output type
-output-format = "text"
-
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
 max-complexity = 10
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "**/__init__.py" = ["D104"] # ignore missing docstring in __init__.py files
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
 
 [tool.isort]
@@ -149,6 +114,8 @@ import_heading_firstparty = "My Modules"
 profile = "black"
 group_by_package = true
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pytest.ini_options]
+addopts = ["--doctest-modules", "--doctest-continue-on-failure"]
+minversion = "8.0"
+testpaths = ["."]
+doctest_optionflags = "ELLIPSIS NORMALIZE_WHITESPACE"

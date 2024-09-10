@@ -1,4 +1,5 @@
 """Weekly Challenge #2 of April 2023."""
+
 # Standard Library
 from collections import defaultdict
 import doctest

@@ -11,7 +11,7 @@ class SnapshotArray:
         self.snapshots = 0
         self.historical_array = [[[0, 0]] for _ in range(length)]
 
-    def set(self, index: int, val: int) -> None:  # noqa: A003 # spec
+    def set(self, index: int, val: int) -> None:  # spec
         """Set index of array to be `val`.
 
         Sets the value in the current version.

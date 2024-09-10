@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 31: Problem #2433 [Medium]."""
+
 # Standard Library
 import doctest
 from itertools import pairwise

@@ -1,4 +1,5 @@
 """Daily Challenge for June 7, 2023 on LeetCode."""
+
 # Standard Library
 import doctest
 
@@ -34,7 +35,7 @@ class Solution:  # noqa: D101
         """Return same as above using bit counting."""
         # first number of mismatches, then number of double zero mismatch
         # be careful, XOR has higher priority than OR
-        return bin((a | b) ^ c).count("1") + bin(a & b & ((a | b) ^ c)).count("1")
+        return ((a | b) ^ c).bit_count() + (a & b & ((a | b) ^ c)).bit_count()
 
     def minFlipsXOR2(self, a: int, b: int, c: int) -> int:
         """Return same as above using bit counting."""

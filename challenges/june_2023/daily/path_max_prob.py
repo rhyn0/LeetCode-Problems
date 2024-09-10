@@ -1,4 +1,5 @@
 """Daily Challenge for June 28, 2023 on LeetCode."""
+
 # Standard Library
 from collections import defaultdict
 from decimal import Decimal
@@ -8,7 +9,7 @@ import heapq
 
 
 class Solution:  # noqa: D101
-    def maxProbability(  # noqa: PLR0913
+    def maxProbability(
         self,
         n: int,
         edges: list[list[int]],

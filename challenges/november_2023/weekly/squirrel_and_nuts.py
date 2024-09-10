@@ -3,6 +3,7 @@
 This problem has been solved before in this repository.
 Check out that solve at: ../../../algorithms/squirrels
 """
+
 # Standard Library
 import doctest
 

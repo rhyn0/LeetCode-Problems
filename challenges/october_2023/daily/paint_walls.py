@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 14: Problem #2742 [Hard]."""
+
 # Standard Library
 import doctest
 import functools
@@ -21,7 +22,7 @@ class Solution:  # noqa: D101
         """
         n = len(cost)
         dp = [[0] * (n + 1) for _ in range(n + 1)]
-        dp[n] = [0] + [float("inf") for _ in range(n)]  # type: ignore
+        dp[n] = [0] + [float("inf") for _ in range(n)]  # type: ignore[misc]
         for i in range(n - 1, -1, -1):
             # frame this as a 0-1 knapsack problem
             for j in range(1, n + 1):
@@ -62,7 +63,7 @@ class Solution:  # noqa: D101
         # consider all walls, with all walls left to do
         # constraint that all tasks are possible so the return
         # inf is never reached at top level
-        return recursive(0, n)  # type: ignore
+        return recursive(0, n)  # type: ignore[return-value]
 
 
 def main() -> None:

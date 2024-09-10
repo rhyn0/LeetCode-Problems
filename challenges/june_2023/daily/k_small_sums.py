@@ -1,4 +1,5 @@
 """Daily Challenge for June 27, 2023 on LeetCode."""
+
 # Standard Library
 import doctest
 import heapq
@@ -73,7 +74,7 @@ def main() -> None:
 
     Test 1:
         >>> sol.kSmallestPairs(*test_case_1)
-        [[1, -1], [2, -1], [1, 1], [4, -1], [2, 1], [1, 2], [2, 2], [4, 1], [4, 2]]
+        [[1, -1], [2, -1], [1, 1], [1, 2], [2, 1], [4, -1], [2, 2], [4, 1], [4, 2]]
     """
 
 

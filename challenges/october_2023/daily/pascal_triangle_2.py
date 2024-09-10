@@ -1,4 +1,5 @@
 """Daily Challenge on LeetCode for October 16: Problem #119 [Easy]."""
+
 # Standard Library
 import doctest
 from functools import reduce

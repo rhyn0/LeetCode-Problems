@@ -1,4 +1,5 @@
 """Weekly Challenge on LeetCode: Problem #2355 [Hard]."""
+
 # Standard Library
 import doctest
 

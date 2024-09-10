@@ -3,6 +3,7 @@
 This problem was previously solved by me and placed elsewhere.
 See LeetCode-Problems/study_plans/leet-75/house_robber/house_rob.py.
 """
+
 # Standard Library
 import doctest
 

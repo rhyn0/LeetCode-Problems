@@ -1,10 +1,11 @@
 """Daily Challenge for November 8 on LeetCode: Problem #2849 [Medium]."""
+
 # Standard Library
 import doctest
 
 
 class Solution:  # noqa: D101
-    def isReachableAtTime(  # noqa: PLR0913
+    def isReachableAtTime(
         self,
         sx: int,
         sy: int,

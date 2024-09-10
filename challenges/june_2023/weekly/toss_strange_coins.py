@@ -1,4 +1,5 @@
 """First Weekly Challenge of June on LeetCode."""
+
 # Standard Library
 from decimal import localcontext
 import doctest

@@ -1,4 +1,5 @@
 """LeetCode Daily Challenge for April 8, 2023."""
+
 from __future__ import annotations
 
 # Standard Library

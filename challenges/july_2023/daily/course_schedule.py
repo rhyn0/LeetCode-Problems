@@ -1,4 +1,5 @@
 """Daily Challenge for July 13, 2023 on LeetCode."""
+
 # Standard Library
 from collections import defaultdict
 from collections import deque
