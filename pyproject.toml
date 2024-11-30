@@ -1,63 +1,26 @@
-[tool.poetry]
+[project]
 name = "RO-LeetCode"
 version = "0.20.1"
 description = "Various LeetCode exercises done"
-authors = ["Ryan Ozawa <ryan.ozawa21@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-package-mode = false
-
-[project]
-name = "RO-LeetCode"
-version = "0.19.0"
-description = "Various LeetCode exercises done"
 authors = [{ name = "Ryan Ozawa", email = "ryan.ozawa21@gmail.com" }]
-license = { text = "MIT" }
+license = "LICENSE"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10,<4.0"
 classifiers = ["Programming Language :: Python :: 3"]
+dependencies = []
 
-[tool.poetry.dependencies]
-python = "^3.10"
-
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^3.7.0"
-ruff = "^0.5.6"
-black = "^24.3.0"
-
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.1.1"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "pre-commit>=3.7.0,<4.0.0",
+    "ruff>=0.5.6,<1.0.0",
+    "black>=24.10.0,<25.0.0",
+    "pytest>=8.1.1,<9.0.0",
+]
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
+# uncomment to overwrite default
+# exclude = []
 # Enable autofix for rules that support it.
 fix = true
 # Indent width for long-line violations
@@ -67,7 +30,7 @@ line-length = 88
 
 output-format = "concise"
 
-required-version = ">=0.5.5"
+required-version = ">=0.8.1"
 # Show fixes in the output.
 show-fixes = true
 target-version = "py310"
@@ -83,7 +46,7 @@ fixable = ["ALL"]
 unfixable = []
 ignore = [
     "D100",   # Missing docstring in public module
-    "TCH003", # Type checking block
+    "TC003",  # Type checking block
     "N802",   # function name should be lowercase, leetCode usually gives camelCase
     "ANN",    # flake8-annotations, https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
     "ERA001", # commented out code

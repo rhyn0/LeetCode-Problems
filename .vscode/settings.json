@@ -1,21 +1,10 @@
 {
     "ruff.enable": true,
     "ruff.lint.enable": true,
-    "ruff.path": [
-        "/Users/ryanozawa/Library/Caches/pypoetry/virtualenvs/ro-leetcode-aeDAkKSw-py3.10/bin/ruff"
-    ],
     "ruff.configuration": "./pyproject.toml",
     "ruff.importStrategy": "fromEnvironment",
     "ruff.nativeServer": "on",
     "black-formatter.importStrategy": "fromEnvironment",
-    "black-formatter.path": [
-        "/usr/bin/env",
-        "-u",
-        "PYTHONPATH",
-        "poetry",
-        "run",
-        "black"
-    ],
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false,
         "gitlens.codeLens.symbolScopes": [
