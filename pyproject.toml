@@ -5,7 +5,7 @@ description = "Various LeetCode exercises done"
 authors = [{ name = "Ryan Ozawa", email = "ryan.ozawa21@gmail.com" }]
 license = "LICENSE"
 readme = "README.md"
-requires-python = ">=3.10,<4.0"
+requires-python = ">=3.11,<4.0"
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = []
 
@@ -33,7 +33,7 @@ output-format = "concise"
 required-version = ">=0.8.1"
 # Show fixes in the output.
 show-fixes = true
-target-version = "py310"
+target-version = "py311"
 
 [tool.ruff.format]
 skip-magic-trailing-comma = false
