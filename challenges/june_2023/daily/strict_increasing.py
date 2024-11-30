@@ -28,12 +28,12 @@ class Solution:  # noqa: D101
         dp = {-1: 0}
         for val in arr1:
             new_dp = defaultdict(lambda: 10**9)
-            for prev in dp:
+            for prev, prev_val in dp.items():
                 if val > prev:
-                    new_dp[val] = min(new_dp[val], dp[prev])
+                    new_dp[val] = min(new_dp[val], prev_val)
                 a2_idx = bisect_right(arr2, prev)
                 if a2_idx < n2:
-                    new_dp[arr2[a2_idx]] = min(new_dp[arr2[a2_idx]], 1 + dp[prev])
+                    new_dp[arr2[a2_idx]] = min(new_dp[arr2[a2_idx]], 1 + prev_val)
             dp = new_dp
         return min(dp.values()) if dp else -1
 

@@ -6,7 +6,7 @@ import doctest
 
 # Definition for a binary tree node.
 class TreeNode:  # noqa: D101
-    __slots__ = "val", "left", "right"
+    __slots__ = "left", "right", "val"
 
     def __init__(  # noqa: D107
         self,

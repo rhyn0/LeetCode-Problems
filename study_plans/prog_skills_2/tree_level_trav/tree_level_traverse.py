@@ -5,7 +5,7 @@ from collections import deque
 
 
 class Node:  # noqa: D101
-    __slots__ = "val", "children"
+    __slots__ = "children", "val"
 
     def __init__(  # noqa: D107
         self,
