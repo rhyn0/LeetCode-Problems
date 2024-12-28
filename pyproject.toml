@@ -51,6 +51,7 @@ ignore = [
     "ANN",    # flake8-annotations, https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
     "ERA001", # commented out code
     "I001",   # isort, we use actual isort
+    "S311",   # random module not suitable for cryptographic purposes
 ]
 select = ["ALL"]
 
