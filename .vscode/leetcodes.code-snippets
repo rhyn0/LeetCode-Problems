@@ -205,5 +205,30 @@
 			"            head = head.next  # type: ignore[assignment]",
 			"        return output"
 		]
+	},
+	"LeetCode Pandas": {
+		"scope": "python",
+		"description": "Pandas question on LeetCode",
+		"prefix": "leetpd",
+		"body": [
+			"$BLOCK_COMMENT_START${6:Problem is From}",
+			"\n${3:Problem Name} on LeetCode.\n",
+			"====================================================\n",
+			"Below is also how I would solve this using PostgreSQL 15.\n",
+			"```sql",
+			"",
+			"```\n",
+			"Setup:",
+			"    >>> ${4:Args}",
+			"",
+			"Example 1:",
+			"    >>> ${1}(${5: supply args})",
+			"    ${6:Output}",
+			"$BLOCK_COMMENT_END  # noqa: E501",
+			"import pandas as pd",
+			"",
+			"def ${1}(${2:ARGS}) -> pd.DataFrame:",
+			"    ...",
+		]
 	}
 }
