@@ -7,7 +7,14 @@ license = "LICENSE"
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
 classifiers = ["Programming Language :: Python :: 3"]
-dependencies = []
+dependencies = [
+    "pandas>=2.2.3",
+]
+
+[project.optional-dependencies]
+types = [
+    "pandas-stubs>=2.2.3.241126",
+]
 
 [dependency-groups]
 dev = [
