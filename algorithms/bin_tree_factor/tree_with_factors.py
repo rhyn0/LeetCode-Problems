@@ -20,7 +20,7 @@ class Solution:  # noqa: D101
             int: Number of binary trees possible to make modulo (10**9 + 7)
         """
         arr.sort()
-        possible_trees = {num: 1 for num in arr}
+        possible_trees = dict.fromkeys(arr, 1)
         for i, root_num in enumerate(arr):
             possible_trees[root_num] += sum(
                 possible_trees[left_num] * possible_trees[right_num]

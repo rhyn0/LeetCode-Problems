@@ -41,7 +41,7 @@ class Solution:  # noqa: D101
         prev_dp = [0.0] * (target + 1)
         prev_dp[0] = 1.0
         for row in range(1, n + 1):
-            dp = [(prev_dp[0] * (1 - prob[row - 1]))] + prev_dp[1:]
+            dp = [prev_dp[0] * (1 - prob[row - 1])] + prev_dp[1:]
             for col in range(1, min(row, target) + 1):
                 dp[col] = prev_dp[col - 1] * prob[row - 1] + prev_dp[col] * (
                     1 - prob[row - 1]

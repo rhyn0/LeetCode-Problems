@@ -30,7 +30,7 @@ class Solution:  # noqa: D101
         for char in s:
             if char in open_close_pairs:
                 stack.append(char)
-            elif len(stack) and char == open_close_pairs[stack.pop()]:
+            elif stack and char == open_close_pairs[stack.pop()]:
                 continue
             else:
                 return False

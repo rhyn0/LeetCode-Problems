@@ -25,7 +25,7 @@ class Solution:  # noqa: D101
         garbage_types = "MPG"
         time_spent_per_garbage = Counter()
         # truck index is correlated to the abvoe string
-        truck_position = {garbage_type: 0 for garbage_type in garbage_types}
+        truck_position = dict.fromkeys(garbage_types, 0)
         # prefix with index 0, to simplify logic when a truck doesnt move
         travel_prefix = [0, *list(accumulate(travel))]
         for house_num, pile in enumerate(garbage):
