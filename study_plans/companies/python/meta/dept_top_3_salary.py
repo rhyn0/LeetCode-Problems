@@ -46,13 +46,13 @@ Setup:
 
 Example 1:
     >>> top_three_salaries(employee, department)
-      name_dept   name  salary
-    0        IT    Joe   85000
-    1     Sales  Henry   80000
-    2     Sales    Sam   60000
-    3        IT    Max   90000
-    4        IT  Randy   85000
-    5        IT   Will   70000
+      Department Employee  Salary
+    0         IT      Joe   85000
+    1      Sales    Henry   80000
+    2      Sales      Sam   60000
+    3         IT      Max   90000
+    4         IT    Randy   85000
+    5         IT     Will   70000
 """  # noqa: E501
 
 # External Party

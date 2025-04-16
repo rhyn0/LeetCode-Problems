@@ -24,9 +24,9 @@ Example 2:
 
 Test Case 1:
     >>> sol.isCompleteTree(test_case_1)
-    False
+    True
     >>> sol.isCompleteTreeDFS(test_case_1)
-    False
+    True
 """
 
 # Standard Library
