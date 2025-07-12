@@ -50,7 +50,7 @@ class Solution:  # noqa: D101
             for first_child_amt in range(min(n, limit) + 1)
         )
 
-    ## Weekly Problem ?? Give bigger tests inputs
+    ## Weekly Problem 2927 Give bigger tests inputs
 
     def distributeCandiesMath(self, n: int, limit: int) -> int:
         """Return same as above but using math."""
